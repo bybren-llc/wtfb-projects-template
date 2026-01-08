@@ -12,6 +12,38 @@ Thank you for your interest in contributing to this project!
 6. **Validate**: Run `npm run validate` before committing
 7. **Submit PR**: Create a pull request with a clear description
 
+## Branch Strategy
+
+This repository uses a two-branch workflow:
+
+| Branch | Purpose | Protection |
+|--------|---------|------------|
+| `main` | Production releases | Protected - PR required |
+| `dev` | Integration branch | PR required |
+
+### Workflow
+
+1. **Create feature branch from `dev`**:
+   ```bash
+   git checkout dev
+   git pull origin dev
+   git checkout -b feature/your-feature-name
+   ```
+
+2. **Make changes and commit** (use conventional commits):
+   ```bash
+   git add .
+   git commit -m "feat(scope): description"
+   ```
+
+3. **Push and create PR to `dev`**:
+   ```bash
+   git push -u origin feature/your-feature-name
+   gh pr create --base dev --title "feat: your feature" --body "Description"
+   ```
+
+4. **After PR merged to `dev`**, maintainers create release PR to `main`
+
 ## VS Code Extensions
 
 When you open this project in VS Code, you'll be prompted to install recommended extensions. These are essential for a smooth workflow:
@@ -79,7 +111,7 @@ npm run lint:md         # Markdown linting
 npm run lint:spell      # Spell check
 ```
 
-CI will automatically run validation on all pull requests to `master` and `dev` branches.
+CI will automatically run validation on all pull requests to `main` and `dev` branches.
 
 ## Linting Configuration
 

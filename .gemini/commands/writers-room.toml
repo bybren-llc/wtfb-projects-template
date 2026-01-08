@@ -1,0 +1,19 @@
+[command]
+name = "writers-room"
+description = "Convene multi-agent pre-production discussion"
+
+[command.arguments]
+topic = { type = "string", required = false, description = "Focus topic for discussion" }
+phase = { type = "string", required = false, description = "Development phase: premise, structure, characters" }
+
+[command.workflow]
+steps = [
+  "Convene 6-agent writers room session",
+  "Each agent contributes from their expertise",
+  "Facilitate constructive debate",
+  "Synthesize consensus and action items"
+]
+
+[command.agents]
+primary = "session-manager"
+supporting = ["story-architect", "story-analyst", "dialogue-writer", "scene-writer", "research-specialist"]

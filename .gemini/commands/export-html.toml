@@ -1,0 +1,19 @@
+[command]
+name = "export-html"
+description = "Export screenplay to HTML preview format"
+
+[command.arguments]
+output = { type = "string", required = false, description = "Output filename" }
+style = { type = "string", required = false, description = "Style theme: standard, dark, print" }
+
+[command.workflow]
+steps = [
+  "Parse Fountain source file",
+  "Convert to styled HTML structure",
+  "Apply CSS formatting",
+  "Write to exports/html/ directory"
+]
+
+[command.agents]
+primary = "production-coordinator"
+supporting = ["script-supervisor"]

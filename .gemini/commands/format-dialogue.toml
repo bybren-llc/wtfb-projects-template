@@ -1,0 +1,20 @@
+[command]
+name = "format-dialogue"
+description = "Format a dialogue block with proper Fountain syntax"
+
+[command.arguments]
+character = { type = "string", required = true, description = "Speaking character name" }
+extension = { type = "string", required = false, description = "V.O., O.S., CONT'D, etc" }
+parenthetical = { type = "string", required = false, description = "Parenthetical direction" }
+
+[command.workflow]
+steps = [
+  "Format character cue in uppercase",
+  "Add extension if specified",
+  "Include parenthetical if provided",
+  "Ensure dialogue follows proper indentation"
+]
+
+[command.agents]
+primary = "dialogue-writer"
+supporting = ["script-supervisor"]

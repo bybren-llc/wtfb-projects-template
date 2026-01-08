@@ -1,0 +1,20 @@
+[command]
+name = "new-scene"
+description = "Add a new scene with proper formatting"
+
+[command.arguments]
+location = { type = "string", required = true, description = "INT/EXT and location name" }
+time = { type = "string", required = false, description = "DAY/NIGHT/CONTINUOUS etc" }
+after = { type = "string", required = false, description = "Scene slug to insert after" }
+
+[command.workflow]
+steps = [
+  "Format scene heading per Fountain spec",
+  "Determine insertion point in script",
+  "Add scene to beat sheet tracking",
+  "Update scene numbering if needed"
+]
+
+[command.agents]
+primary = "scene-writer"
+supporting = ["story-architect", "script-supervisor"]

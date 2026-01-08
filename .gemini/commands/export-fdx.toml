@@ -1,0 +1,19 @@
+[command]
+name = "export-fdx"
+description = "Export screenplay to Final Draft XML format"
+
+[command.arguments]
+output = { type = "string", required = false, description = "Output filename" }
+scenes = { type = "string", required = false, description = "Specific scenes to export" }
+
+[command.workflow]
+steps = [
+  "Parse Fountain source file",
+  "Convert to Final Draft XML structure",
+  "Apply proper element formatting",
+  "Write to exports/fdx/ directory"
+]
+
+[command.agents]
+primary = "production-coordinator"
+supporting = ["script-supervisor"]

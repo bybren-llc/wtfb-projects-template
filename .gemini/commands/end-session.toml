@@ -1,0 +1,18 @@
+[command]
+name = "end-session"
+description = "Complete the current writing session and commit progress"
+
+[command.arguments]
+message = { type = "string", required = false, description = "Custom commit message" }
+
+[command.workflow]
+steps = [
+  "Review changes made this session",
+  "Run format validation",
+  "Update continuity tracking if needed",
+  "Stage and commit with session summary"
+]
+
+[command.agents]
+primary = "session-manager"
+supporting = ["script-supervisor", "continuity-editor"]

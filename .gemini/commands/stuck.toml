@@ -1,0 +1,19 @@
+[command]
+name = "stuck"
+description = "Get help when blocked on a writing problem"
+
+[command.arguments]
+problem = { type = "string", required = false, description = "Description of the block" }
+scene = { type = "string", required = false, description = "Scene where stuck" }
+
+[command.workflow]
+steps = [
+  "Identify the nature of the block",
+  "Review relevant story context",
+  "Suggest multiple approaches",
+  "Offer exercises to break through"
+]
+
+[command.agents]
+primary = "story-analyst"
+supporting = ["story-architect", "dialogue-writer", "scene-writer"]

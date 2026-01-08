@@ -2,10 +2,10 @@
   "$schema": "https://wtfb.io/schemas/project.v1.json",
   "projectType": "screenplay",
   "name": "wtfb-project",
-  "version": "1.0.0",
+  "version": "0.9.98",
   "template": {
     "upstream": "https://github.com/bybren-llc/wtfb-projects-template",
-    "version": "1.0.0",
+    "version": "0.9.98",
     "lastSync": null
   },
   "plugins": {
@@ -41,6 +41,7 @@
     ".github/workflows/**",
     "scripts/**",
     ".wtfb/ai-harness/**",
-    "templates/**"
+    "templates/**",
+    "patterns/**"
   ]
 }

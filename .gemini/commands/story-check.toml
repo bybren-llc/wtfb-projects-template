@@ -1,0 +1,18 @@
+[command]
+name = "story-check"
+description = "Validate story against 12 critical questions"
+
+[command.arguments]
+section = { type = "string", required = false, description = "Specific section: premise, structure, character, theme" }
+
+[command.workflow]
+steps = [
+  "Review story against 12 critical questions",
+  "Identify strengths and weaknesses",
+  "Flag areas needing development",
+  "Provide actionable recommendations"
+]
+
+[command.agents]
+primary = "story-analyst"
+supporting = ["story-architect"]

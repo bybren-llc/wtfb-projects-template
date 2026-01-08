@@ -1,0 +1,19 @@
+[command]
+name = "analyze-character"
+description = "Analyze a character's arc, voice, and consistency"
+
+[command.arguments]
+character_name = { type = "string", required = true, description = "Name of the character to analyze" }
+focus = { type = "string", required = false, description = "Specific aspect: arc, voice, relationships" }
+
+[command.workflow]
+steps = [
+  "Find all scenes featuring the character",
+  "Map character arc across story structure",
+  "Analyze dialogue patterns and voice",
+  "Check consistency and identify gaps"
+]
+
+[command.agents]
+primary = "story-analyst"
+supporting = ["dialogue-writer", "continuity-editor"]

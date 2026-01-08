@@ -1,0 +1,126 @@
+# /analyze-structure
+
+Perform three-act structure analysis on the screenplay.
+
+## Arguments
+- `[framework]` - Optional: `three-act`, `save-the-cat`, `hero-journey`, `sequence`
+
+## Workflow
+
+### Step 1: Load Screenplay
+- Read complete .fountain file
+- Count total pages
+- Identify all scene headings
+
+### Step 2: Identify Structure Points
+Map key story beats to page numbers:
+
+#### Three-Act (Default)
+| Beat | Target Page | Actual |
+|------|-------------|--------|
+| Opening Image | 1 | ? |
+| Theme Stated | 5 | ? |
+| Catalyst | 12 | ? |
+| Break Into Two | 25 | ? |
+| B Story | 30 | ? |
+| Midpoint | 55 | ? |
+| All Is Lost | 75 | ? |
+| Dark Night | 75-85 | ? |
+| Break Into Three | 85 | ? |
+| Finale | 85-110 | ? |
+| Final Image | 110 | ? |
+
+### Step 3: Calculate Proportions
+```markdown
+| Act | Target % | Actual % | Pages |
+|-----|----------|----------|-------|
+| One | 25% | ?% | ?-? |
+| Two | 50% | ?% | ?-? |
+| Three | 25% | ?% | ?-? |
+```
+
+### Step 4: Generate Analysis
+
+```markdown
+## Structure Analysis: [TITLE]
+
+### Framework: [Three-Act/Save the Cat/etc.]
+### Total Pages: [X]
+
+### Act Breakdown
+[Table of act proportions]
+
+### Beat Placement
+[Table of beats with variance from target]
+
+### Structural Strengths
+- [What works]
+
+### Structural Issues
+- [What needs attention]
+
+### Recommendations
+1. [Specific adjustment]
+2. [Specific adjustment]
+```
+
+## Framework Options
+
+### Three-Act Structure
+Standard Hollywood structure with Setup, Confrontation, Resolution.
+
+### Save the Cat! (Blake Snyder)
+15-beat commercial structure with specific page targets.
+
+### Hero's Journey (Vogler)
+12-stage mythic structure mapping the hero's transformation.
+
+### Sequence Method
+8-sequence format dividing the screenplay into mini-movies.
+
+## Output Example
+
+```markdown
+## Structure Analysis: Seoul Identity
+
+### Framework: Three-Act
+### Total Pages: 105
+
+### Act Breakdown
+| Act | Target | Actual | Status |
+|-----|--------|--------|--------|
+| One | 26 (25%) | 28 (27%) | ⚠️ Slightly long |
+| Two | 53 (50%) | 49 (47%) | ⚠️ Slightly short |
+| Three | 26 (25%) | 28 (27%) | ⚠️ Slightly long |
+
+### Beat Placement
+| Beat | Target | Actual | Variance |
+|------|--------|--------|----------|
+| Catalyst | 12 | 15 | +3 ⚠️ |
+| Break Into Two | 25 | 28 | +3 ⚠️ |
+| Midpoint | 52 | 50 | -2 ✓ |
+| All Is Lost | 79 | 72 | -7 ⚠️ |
+| Break Into Three | 89 | 85 | -4 ✓ |
+
+### Structural Strengths
+- Strong midpoint reversal at appropriate page
+- Clear break into Act Three
+- Final image effectively mirrors opening
+
+### Structural Issues
+- Catalyst comes late, delaying story momentum
+- All Is Lost occurs early, making Act 2B feel rushed
+- Act One runs long with too much setup
+
+### Recommendations
+1. Trim setup scenes in Act One to hit catalyst by page 12
+2. Extend the "Bad Guys Close In" section before All Is Lost
+3. Consider combining or cutting exposition scenes 5-8
+```
+
+## Success Criteria
+- [ ] All beats identified (or marked missing)
+- [ ] Act proportions calculated
+- [ ] Variance from targets noted
+- [ ] Actionable recommendations provided
+- [ ] Appropriate framework applied

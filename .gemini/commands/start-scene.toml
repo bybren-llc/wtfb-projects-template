@@ -1,0 +1,19 @@
+[command]
+name = "start-scene"
+description = "Begin development of a new scene"
+
+[command.arguments]
+scene_name = { type = "string", required = true, description = "Scene identifier or slug" }
+location = { type = "string", required = false, description = "INT/EXT location" }
+
+[command.workflow]
+steps = [
+  "Create branch: scene/{scene_name}",
+  "Initialize scene heading",
+  "Set up scene structure",
+  "Assign Scene Writer as lead"
+]
+
+[command.agents]
+primary = "scene-writer"
+supporting = ["story-architect", "continuity-editor"]

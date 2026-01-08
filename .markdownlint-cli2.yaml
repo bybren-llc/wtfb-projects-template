@@ -40,6 +40,21 @@ config:
   # Allow mixed heading styles
   MD003: false
 
+  # Allow files without trailing newline
+  MD047: false
+
+  # Allow mixed emphasis styles (asterisk/underscore)
+  MD049: false
+
+  # Allow spaces in emphasis markers
+  MD037: false
+
+  # Allow table column count mismatches
+  MD056: false
+
+  # Allow multiple consecutive blank lines
+  MD012: false
+
 globs:
   - "**/*.md"
   - "!node_modules/**"

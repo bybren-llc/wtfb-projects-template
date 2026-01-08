@@ -8,18 +8,34 @@
     "lint:fountain": "node scripts/validate-fountain.js",
     "lint:md": "markdownlint-cli2 '**/*.md' '#node_modules'",
     "lint:spell": "cspell '**/*.{md,fountain,txt}' --no-progress",
-    "init": "bash scripts/init-project.sh"
+    "init": "bash scripts/init-project.sh",
+    "prepare": "husky"
   },
   "devDependencies": {
     "cspell": "^8.0.0",
-    "markdownlint-cli2": "^0.12.0"
+    "fountain-js": "^1.2.4",
+    "husky": "^9.0.0",
+    "lint-staged": "^15.0.0",
+    "markdownlint-cli2": "^0.15.0"
+  },
+  "lint-staged": {
+    "*.md": [
+      "markdownlint-cli2 --fix",
+      "cspell --no-must-find-files"
+    ],
+    "*.fountain": [
+      "node scripts/validate-fountain.js",
+      "cspell --no-must-find-files"
+    ]
   },
   "keywords": [
     "wtfb",
     "screenplay",
     "fountain",
     "creative",
-    "film"
+    "film",
+    "novel",
+    "production"
   ],
   "author": "Words To Film By <dev@wordstofilmby.com>",
   "license": "MIT",

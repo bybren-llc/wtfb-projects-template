@@ -1,0 +1,23 @@
+[command]
+name = "scene-list"
+description = "Generate a list of all scenes in the project"
+
+[command.arguments]
+format = { type = "string", required = false, description = "table|list|detailed" }
+include = { type = "string", required = false, description = "all|int|ext" }
+
+[command.workflow]
+steps = [
+  "Parse all scene headings",
+  "Extract scene metadata",
+  "Calculate page ranges",
+  "Format output"
+]
+
+[command.agents]
+primary = "scene-annotator"
+supporting = ["script-supervisor"]
+
+[command.output]
+format = "markdown"
+includes = ["scene_number", "heading", "page_range", "synopsis"]

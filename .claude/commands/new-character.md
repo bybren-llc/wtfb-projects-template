@@ -1,0 +1,125 @@
+# /new-character
+
+Add a new character with proper introduction and tracking.
+
+## Arguments
+- `[name]` - Required: Character name
+- `[age]` - Optional: Age or age range
+- `[description]` - Optional: Brief description
+
+## Workflow
+
+### Step 1: Character Setup
+Gather information:
+- Full name for registry
+- How they appear in script (usually FIRST NAME)
+- Age range
+- Key physical description
+
+### Step 2: Create Character Introduction
+Generate introduction in action:
+```fountain
+[NAME] ([age], [brief vivid description])
+```
+
+### Step 3: Add to Character Registry
+```markdown
+### [CHARACTER NAME]
+- First Appearance: Scene [X], Page [Y]
+- Age: [range]
+- Description: [details]
+- Role: [protagonist/antagonist/supporting]
+```
+
+### Step 4: Set Up Dialogue Block
+Prepare first dialogue opportunity:
+```fountain
+[CHARACTER NAME]
+(first line ready)
+```
+
+## Introduction Best Practices
+
+### Good Introductions
+```fountain
+SARAH CHEN (30s, sharp eyes behind wire-rim glasses)
+
+DETECTIVE PARK (50s, the kind of tired that coffee can't fix)
+
+MARCUS (20s, all nervous energy and expensive sneakers)
+```
+
+### Avoid
+```fountain
+// Too vague
+SARAH, an attractive woman, enters.
+
+// Too detailed (casting)
+JOHN, 6'2", brown hair, blue eyes, muscular build.
+
+// Passive
+A woman named SARAH is seen sitting there.
+```
+
+## Character Registry Entry
+
+```markdown
+## Character: [NAME]
+
+### Basic Info
+- **Full Name:** [complete name]
+- **Script Name:** [how referred to in script]
+- **First Appearance:** Scene [X], Page [Y]
+- **Age:** [range, e.g., "30s" or "late 40s"]
+- **Role:** [protagonist/antagonist/supporting/minor]
+
+### Physical Description
+[Key visual details for continuity]
+
+### Character Notes
+[Relevant background for writing]
+```
+
+## Examples
+
+```
+User: /new-character sarah chen 30s determined investigative journalist
+Output:
+Character created: SARAH
+
+Introduction line:
+SARAH CHEN (30s, the kind of journalist who doesn't take "no comment" for an answer)
+
+Added to Character Registry:
+- Full Name: Sarah Chen
+- Script Name: SARAH
+- Age: 30s
+- Role: [specify]
+- First Appearance: [current scene]
+
+Ready for first dialogue:
+SARAH
+[dialogue here]
+```
+
+```
+User: /new-character detective park
+Output:
+Character created: DETECTIVE PARK
+
+Need more info for full introduction:
+- Age range? (30s/40s/50s/60s)
+- Key characteristic?
+
+Basic introduction ready:
+DETECTIVE PARK enters.
+
+Add details with: DETECTIVE PARK (50s, [description])
+```
+
+## Success Criteria
+- [ ] Character name in UPPERCASE
+- [ ] Age range included
+- [ ] Vivid, brief description
+- [ ] Added to character registry
+- [ ] Ready for dialogue

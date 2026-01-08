@@ -1,0 +1,23 @@
+[command]
+name = "new-character"
+description = "Add a new character to the project"
+
+[command.arguments]
+name = { type = "string", required = true, description = "Character name (uppercase)" }
+role = { type = "string", required = false, description = "protagonist|antagonist|supporting|minor" }
+description = { type = "string", required = false, description = "Brief character description" }
+
+[command.workflow]
+steps = [
+  "Add to character registry",
+  "Define initial voice profile",
+  "Set up character tracking",
+  "Create character arc outline"
+]
+
+[command.agents]
+primary = "dialogue-writer"
+supporting = ["story-analyst", "continuity-editor"]
+
+[command.files]
+updates = ["templates/character-registry.md"]

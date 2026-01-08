@@ -1,0 +1,187 @@
+# /scene-list
+
+List all scenes with page estimates and metadata.
+
+## Arguments
+- `[filter]` - Optional: `int`, `ext`, `day`, `night`, `act1`, `act2`, `act3`
+
+## Workflow
+
+### Step 1: Parse Screenplay
+Extract all scene headings with:
+- Scene number (position)
+- Full heading text
+- Estimated page
+- Page length estimate
+
+### Step 2: Apply Filter (if specified)
+Filter by:
+- INT/EXT type
+- Time of day
+- Act
+
+### Step 3: Generate Scene List
+
+```markdown
+## Scene List: [TITLE]
+
+| # | Heading | Page | Length |
+|---|---------|------|--------|
+| 1 | INT. APARTMENT - DAY | 1 | 2 |
+| 2 | EXT. STREET - DAY | 3 | 1 |
+| ... | ... | ... | ... |
+
+**Total**: [X] scenes, ~[Y] pages
+```
+
+## Output Formats
+
+### Standard List
+```markdown
+## Scene List: Seoul Identity
+
+| # | Scene Heading | Page | ~Pages |
+|---|---------------|------|--------|
+| 1 | INT. SARAH'S APARTMENT - DAY | 1 | 2.5 |
+| 2 | EXT. SEOUL STREET - DAY | 3 | 1 |
+| 3 | INT. COFFEE SHOP - DAY | 4 | 3 |
+| 4 | INT. POLICE STATION - DAY | 7 | 2 |
+| 5 | EXT. WAREHOUSE - NIGHT | 9 | 4 |
+| ... | ... | ... | ... |
+
+**Total**: 62 scenes, ~98 pages
+```
+
+### Detailed List
+```markdown
+## Scene List: Seoul Identity (Detailed)
+
+### Scene 1
+- **Heading**: INT. SARAH'S APARTMENT - DAY
+- **Page**: 1-3 (~2.5 pages)
+- **Characters**: SARAH
+- **Purpose**: Introduction, establish protagonist
+
+### Scene 2
+- **Heading**: EXT. SEOUL STREET - DAY
+- **Page**: 3-4 (~1 page)
+- **Characters**: SARAH
+- **Purpose**: Transition, establish world
+```
+
+### By Act
+```markdown
+## Scene List by Act: Seoul Identity
+
+### Act One (Pages 1-25)
+| # | Scene | Page | Length |
+|---|-------|------|--------|
+| 1 | INT. SARAH'S APARTMENT - DAY | 1 | 2.5 |
+| 2 | EXT. SEOUL STREET - DAY | 3 | 1 |
+| ... | ... | ... | ... |
+
+**Act One**: 12 scenes, 25 pages
+
+### Act Two (Pages 25-77)
+| # | Scene | Page | Length |
+|---|-------|------|--------|
+| 13 | INT. JOHN'S OFFICE - DAY | 26 | 3 |
+| ... | ... | ... | ... |
+
+**Act Two**: 35 scenes, 52 pages
+
+### Act Three (Pages 77-98)
+| # | Scene | Page | Length |
+|---|-------|------|--------|
+| 48 | EXT. ROOFTOP - NIGHT | 78 | 5 |
+| ... | ... | ... | ... |
+
+**Act Three**: 15 scenes, 21 pages
+```
+
+## Filtered Views
+
+### Interior Only
+```
+User: /scene-list int
+Output: Shows only INT. scenes
+```
+
+### Exterior Only
+```
+User: /scene-list ext
+Output: Shows only EXT. scenes
+```
+
+### Day Scenes
+```
+User: /scene-list day
+Output: Shows only DAY scenes
+```
+
+### Night Scenes
+```
+User: /scene-list night
+Output: Shows only NIGHT scenes
+```
+
+### By Act
+```
+User: /scene-list act2
+Output: Shows only Act Two scenes
+```
+
+## Statistics Summary
+
+```markdown
+### Scene Statistics
+
+**By Type**
+- Interior: [X] scenes ([%])
+- Exterior: [Y] scenes ([%])
+- INT./EXT.: [Z] scenes ([%])
+
+**By Time**
+- Day: [X] scenes ([%])
+- Night: [Y] scenes ([%])
+- Other: [Z] scenes ([%])
+
+**By Length**
+- Short (< 1 page): [X] scenes
+- Medium (1-3 pages): [Y] scenes
+- Long (3+ pages): [Z] scenes
+
+**Unique Locations**: [N]
+```
+
+## Example Output
+
+```markdown
+## Scene List: Seoul Identity
+
+| # | Scene Heading | Page | ~Pgs |
+|---|---------------|------|------|
+| 1 | INT. SARAH'S APARTMENT - DAY | 1 | 2.5 |
+| 2 | EXT. SEOUL STREET - DAY | 3 | 1 |
+| 3 | INT. COFFEE SHOP - DAY | 4 | 3 |
+| 4 | INT. POLICE STATION - DAY | 7 | 2 |
+| 5 | EXT. WAREHOUSE DISTRICT - NIGHT | 9 | 4 |
+| 6 | INT. WAREHOUSE - NIGHT | 13 | 3 |
+| 7 | INT. SARAH'S APARTMENT - NIGHT | 16 | 2 |
+| ... | ... | ... | ... |
+| 62 | EXT. SEOUL BRIDGE - DAWN | 95 | 3 |
+
+**Total**: 62 scenes, ~98 pages
+
+### Statistics
+- INT: 38 (61%) | EXT: 20 (32%) | INT./EXT: 4 (6%)
+- DAY: 35 (56%) | NIGHT: 25 (40%) | OTHER: 2 (3%)
+- Unique locations: 18
+```
+
+## Success Criteria
+- [ ] All scenes listed
+- [ ] Page numbers estimated
+- [ ] Scene lengths calculated
+- [ ] Totals provided
+- [ ] Statistics generated

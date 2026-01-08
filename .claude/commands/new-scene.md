@@ -1,0 +1,96 @@
+# /new-scene
+
+Insert a properly formatted scene heading.
+
+## Arguments
+- `[location]` - Required: Scene location
+- `[time]` - Optional: Time of day (default: DAY)
+- `[int/ext]` - Optional: Interior/Exterior (default: INT)
+
+## Workflow
+
+### Step 1: Parse Arguments
+Extract from input:
+- Interior/Exterior type
+- Location name
+- Time of day
+
+### Step 2: Validate Against Existing Locations
+Check `locations` in continuity tracking:
+- If location exists, use consistent naming
+- If new location, add to registry
+
+### Step 3: Generate Scene Heading
+Format: `[INT./EXT.] [LOCATION] - [TIME]`
+
+### Step 4: Insert Scene Heading
+Add to screenplay with proper spacing:
+```fountain
+
+INT. LOCATION - DAY
+
+```
+
+## Syntax Reference
+
+### Interior/Exterior Options
+- `int` or `interior` → `INT.`
+- `ext` or `exterior` → `EXT.`
+- `both` or `int/ext` → `INT./EXT.`
+
+### Time of Day Options
+- `day` → `DAY`
+- `night` → `NIGHT`
+- `morning` → `MORNING`
+- `afternoon` → `AFTERNOON`
+- `evening` → `EVENING`
+- `dawn` → `DAWN`
+- `dusk` → `DUSK`
+- `continuous` or `cont` → `CONTINUOUS`
+- `later` → `LATER`
+- `same` → `SAME`
+
+## Examples
+
+```
+User: /new-scene coffee shop
+Output: INT. COFFEE SHOP - DAY
+
+User: /new-scene ext street night
+Output: EXT. STREET - NIGHT
+
+User: /new-scene int/ext car moving continuous
+Output: INT./EXT. CAR (MOVING) - CONTINUOUS
+
+User: /new-scene warehouse later
+Output: INT. WAREHOUSE - LATER
+```
+
+## Special Cases
+
+### Sub-locations
+```
+User: /new-scene john's apartment bedroom
+Output: INT. JOHN'S APARTMENT - BEDROOM - DAY
+```
+
+### With Modifiers
+```
+User: /new-scene car moving
+Output: INT./EXT. CAR (MOVING) - DAY
+
+User: /new-scene ext house establishing
+Output: EXT. HOUSE (ESTABLISHING) - DAY
+```
+
+### Flashback/Special
+```
+User: /new-scene childhood home flashback
+Output: INT. CHILDHOOD HOME - DAY (FLASHBACK)
+```
+
+## Success Criteria
+- [ ] Valid scene heading format
+- [ ] Consistent with existing location names
+- [ ] Proper spacing before and after
+- [ ] Time of day included

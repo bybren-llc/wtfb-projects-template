@@ -1,0 +1,24 @@
+[command]
+name = "check-continuity"
+description = "Verify consistency across the project"
+
+[command.arguments]
+scope = { type = "string", required = false, description = "all|timeline|characters|locations" }
+scene = { type = "string", required = false, description = "Specific scene to check" }
+
+[command.workflow]
+steps = [
+  "Scan for timeline references",
+  "Track character states",
+  "Verify location consistency",
+  "Check prop/costume continuity",
+  "Generate continuity report"
+]
+
+[command.agents]
+primary = "continuity-editor"
+supporting = ["research-specialist"]
+
+[command.validation]
+blocking = true
+required_for = ["pr", "export"]

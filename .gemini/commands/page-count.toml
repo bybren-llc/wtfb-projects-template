@@ -1,0 +1,21 @@
+[command]
+name = "page-count"
+description = "Calculate estimated page count"
+
+[command.arguments]
+detailed = { type = "boolean", required = false, description = "Show per-act breakdown" }
+
+[command.workflow]
+steps = [
+  "Parse source content",
+  "Apply page estimation algorithm",
+  "Calculate act breakdowns if detailed",
+  "Generate report"
+]
+
+[command.agents]
+primary = "script-supervisor"
+
+[command.output]
+format = "text"
+includes = ["total_pages", "act_breakdown", "scene_count"]

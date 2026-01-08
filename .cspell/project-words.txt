@@ -30,3 +30,30 @@ davidanson
 yzhang
 esbenp
 eamodio
+
+# AI tools
+gemini
+openai
+codex
+harness
+subagent
+multiline
+
+# Git/workflow terms
+husky
+precommit
+npx
+lifecycle
+kebab
+
+# Agent names
+annotator
+posthog
+
+# Formats
+toml
+
+# Payment/finance
+zelle
+paypal
+kofi

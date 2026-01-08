@@ -1,0 +1,24 @@
+[command]
+name = "export-pdf"
+description = "Generate PDF output for reading or submission"
+
+[command.arguments]
+output = { type = "string", required = false, description = "Output filename" }
+watermark = { type = "string", required = false, description = "Watermark text" }
+include_notes = { type = "boolean", required = false, description = "Include script notes" }
+
+[command.workflow]
+steps = [
+  "Verify format validation passed",
+  "Generate PDF from source",
+  "Apply watermark if specified",
+  "Save to exports/",
+  "Log export in history"
+]
+
+[command.agents]
+primary = "production-coordinator"
+supporting = ["script-supervisor"]
+
+[command.prerequisites]
+validation = ["check-format"]

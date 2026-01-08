@@ -1,0 +1,23 @@
+[command]
+name = "analyze-structure"
+description = "Review and analyze narrative structure"
+
+[command.arguments]
+focus = { type = "string", required = false, description = "acts|sequences|beats|all" }
+
+[command.workflow]
+steps = [
+  "Identify act breaks",
+  "Map major plot points",
+  "Evaluate pacing",
+  "Check structural balance",
+  "Generate structure report"
+]
+
+[command.agents]
+primary = "story-architect"
+supporting = ["story-analyst"]
+
+[command.output]
+format = "markdown"
+includes = ["beat_map", "pacing_analysis", "recommendations"]

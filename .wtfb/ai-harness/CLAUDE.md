@@ -6,15 +6,32 @@ This file provides guidance to Claude Code when working with this WTFB creative 
 
 This is a **WTFB (Words To Film By)** creative project. Check `.wtfb/project.json` for the project type (screenplay, novel, or film-production).
 
+## Multi-Agent Harness
+
+This project uses an 11-agent team for collaborative development. See `AGENTS.md` for the complete team reference.
+
+### Harness Location
+- **Agents**: `.claude/agents/` - 11 specialized agent profiles
+- **Commands**: `.claude/commands/` - Slash command definitions
+- **Skills**: `.claude/skills/` - Knowledge base modules
+- **Hooks**: `.claude/hooks/` - Hook configurations
+
+### Agent Invocation
+```
+Acting as the Story Architect, evaluate the three-act structure...
+Acting as the Dialogue Writer, refine the voice for [character]...
+```
+
 ## Quick Reference
 
 ### Capability Schema
-See `.wtfb/ai-harness/schema.json` for full capability definitions, available agents, and commands.
+See `.wtfb/ai-harness/schema.json` for full capability definitions.
 
 ### Project Configuration
 - **Type & Plugins**: `.wtfb/project.json`
 - **Marketing Config**: `marketing/wtfb-marketing.json`
 - **Templates**: `templates/`
+- **Patterns**: `patterns/`
 - **Source Materials**: `sourcematerials/`
 
 ---

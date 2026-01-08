@@ -1,0 +1,24 @@
+[command]
+name = "check-format"
+description = "Validate format syntax across the project"
+
+[command.arguments]
+file = { type = "string", required = false, description = "Specific file to check (default: all)" }
+fix = { type = "boolean", required = false, description = "Auto-fix issues where possible" }
+
+[command.workflow]
+steps = [
+  "Run format linter",
+  "Check scene heading format",
+  "Validate character name consistency",
+  "Check parenthetical formatting",
+  "Report issues found"
+]
+
+[command.agents]
+primary = "script-supervisor"
+supporting = ["standards-reviewer"]
+
+[command.validation]
+blocking = true
+required_for = ["commit", "pr", "export"]

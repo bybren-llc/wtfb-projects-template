@@ -1,0 +1,83 @@
+# /end-session
+
+Complete a writing session cleanly with proper state preservation.
+
+## Workflow
+
+### Step 1: Session Summary
+Generate summary of work completed:
+- Scenes written/revised
+- Pages added/removed
+- Major changes made
+
+### Step 2: Git Status Check
+```bash
+git status
+```
+
+If uncommitted changes exist:
+1. Display changes
+2. Offer to commit with descriptive message
+3. Use commit format:
+   ```
+   scene(location): Brief description
+
+   - Detail 1
+   - Detail 2
+   ```
+
+### Step 3: Update Tracking
+- Note current page count
+- Update any continuity databases if modified
+- Record session in log
+
+### Step 4: Carryover Notes
+Identify items for next session:
+- [[TODO:]] notes still open
+- [[QUESTION:]] notes needing resolution
+- Scenes left incomplete
+- Next logical scene to write
+
+### Step 5: Clean Exit
+```markdown
+📊 Session Summary
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Scenes: [written/revised count]
+Pages: [current total] ([+/- change])
+Duration: [if tracked]
+
+💾 Git Status: [committed/uncommitted changes]
+
+📝 Next Session
+- [Carryover item 1]
+- [Carryover item 2]
+
+✅ Session ended cleanly
+```
+
+## Success Criteria
+- [ ] Changes committed or user declined
+- [ ] Session summary generated
+- [ ] Carryover items noted
+- [ ] Clean state for next session
+
+## Example Output
+
+```
+📊 Session Summary
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Scenes: 3 written, 1 revised
+Pages: 45 (+8 from session start)
+
+💾 Git Status: All changes committed
+   scene(coffee-shop): Sarah confronts John with evidence
+   scene(street): John's desperate phone call
+   scene(warehouse): Setup for act two climax
+
+📝 Next Session
+- Complete warehouse scene (dialogue pass needed)
+- [[TODO: Research Seoul warehouse districts]]
+- Begin Act Two sequence 4
+
+✅ Session ended cleanly
+```

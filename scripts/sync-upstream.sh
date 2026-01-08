@@ -48,9 +48,9 @@ git fetch upstream
 echo ""
 echo -e "${YELLOW}Template updates available:${NC}"
 echo ""
-git log HEAD..upstream/main --oneline 2>/dev/null || echo "  (none or already up to date)"
+git log HEAD..upstream/master --oneline 2>/dev/null || echo "  (none or already up to date)"
 
-BEHIND=$(git rev-list HEAD..upstream/main --count 2>/dev/null || echo "0")
+BEHIND=$(git rev-list HEAD..upstream/master --count 2>/dev/null || echo "0")
 
 if [ "$BEHIND" -eq 0 ]; then
     echo ""
@@ -73,7 +73,7 @@ jq -r '.protectedPaths[]?' .wtfb/project.json 2>/dev/null || echo "  *.fountain,
 echo ""
 echo -e "${YELLOW}To merge updates:${NC}"
 echo ""
-echo "  git merge upstream/main --no-commit"
+echo "  git merge upstream/master --no-commit"
 echo "  # Review changes carefully"
 echo "  # Resolve any conflicts"
 echo "  git commit -m 'sync: merge upstream template updates'"
@@ -81,7 +81,7 @@ echo ""
 echo -e "${YELLOW}Or create a branch first:${NC}"
 echo ""
 echo "  git checkout -b sync/upstream-$(date +%Y%m%d)"
-echo "  git merge upstream/main"
+echo "  git merge upstream/master"
 echo "  # Review, then create a PR"
 echo ""
 
@@ -95,7 +95,7 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then
     git checkout -b "$BRANCH_NAME" 2>/dev/null || git checkout "$BRANCH_NAME"
 
     echo "Merging upstream..."
-    if git merge upstream/main --no-commit; then
+    if git merge upstream/master --no-commit; then
         echo ""
         echo -e "${GREEN}Merge successful! Review the changes and commit when ready:${NC}"
         echo ""

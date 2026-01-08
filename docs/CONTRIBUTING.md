@@ -14,35 +14,60 @@ Thank you for your interest in contributing to this project!
 
 ## Branch Strategy
 
-This repository uses a two-branch workflow:
+### Protected Branches
 
 | Branch | Purpose | Protection |
 |--------|---------|------------|
-| `main` | Production releases | Protected - PR required |
-| `dev` | Integration branch | PR required |
+| `main` | Production-ready drafts | PR required, no direct pushes |
+| `draft/v{N}` | Major versions (e.g., `draft/v1`, `draft/v2`) | PR required |
+| `draft/v{N}-{qualifier}` | Named variants (e.g., `draft/v2-polish`) | PR required |
+
+### Working Branches
+
+Pattern: `type/kebab-case-description`
+
+| Type | Purpose | Examples |
+|------|---------|----------|
+| `scene/{slug}` | Single scene or sequence | `scene/opening`, `scene/midpoint-reveal` |
+| `revision/{type}` | Full-script revision pass | `revision/dialogue`, `revision/action` |
+| `character/{name}` | Character-focused work | `character/protagonist-arc` |
+| `structure/{change}` | Structural reorganization | `structure/reorder-act2` |
+| `fix/{issue}` | Targeted fixes | `fix/continuity-sc15`, `fix/format` |
+| `export/{format}` | Export preparation | `export/table-read`, `export/competition` |
+| `docs/{topic}` | Documentation updates | `docs/workflow`, `docs/readme` |
+
+**Naming rules:** Type prefix + 2-5 words in kebab-case. No special characters except hyphens.
 
 ### Workflow
 
-1. **Create feature branch from `dev`**:
+1. **Create working branch**:
    ```bash
-   git checkout dev
-   git pull origin dev
-   git checkout -b feature/your-feature-name
+   git checkout main  # or draft/v{N}
+   git pull origin main
+   git checkout -b scene/your-scene-name
    ```
 
-2. **Make changes and commit** (use conventional commits):
+2. **Make changes and commit**:
    ```bash
    git add .
-   git commit -m "feat(scope): description"
+   git commit -m "scene(act1): add opening sequence"
    ```
 
-3. **Push and create PR to `dev`**:
+3. **Push and create PR**:
    ```bash
-   git push -u origin feature/your-feature-name
-   gh pr create --base dev --title "feat: your feature" --body "Description"
+   git push -u origin scene/your-scene-name
+   gh pr create --base main --title "scene: add opening sequence"
    ```
 
-4. **After PR merged to `dev`**, maintainers create release PR to `main`
+4. **Merge strategy**:
+   - **Squash merge**: `scene/*`, `fix/*`, `export/*` (clean history)
+   - **Regular merge**: `revision/*`, `structure/*`, `character/*` (preserve history)
+
+5. **Cleanup after merge**:
+   ```bash
+   git branch -d scene/your-scene-name
+   git push origin --delete scene/your-scene-name
+   ```
 
 ## VS Code Extensions
 
@@ -69,29 +94,38 @@ code --install-extension eamodio.gitlens
 code --install-extension github.vscode-pull-request-github
 ```
 
-## Branch Naming
-
-Use these prefixes for your branches:
-
-- `feature/` - New content, scenes, chapters
-- `fix/` - Bug fixes, continuity corrections
-- `revision/` - Full-script revision passes
-- `docs/` - Documentation updates
-
 ## Commit Messages
 
-Follow this format:
+Pattern: `type(scope): description`
 
-```
-type(scope): description
-
-Types: scene, dialogue, action, structure, revision, notes, format, docs
-```
+| Type | Purpose |
+|------|---------|
+| `scene` | New or modified scene content |
+| `dialogue` | Dialogue improvements |
+| `action` | Action line changes |
+| `structure` | Structural reorganization |
+| `revision` | Revision pass changes |
+| `character` | Character development |
+| `notes` | Notes and annotations |
+| `format` | Formatting fixes |
+| `docs` | Documentation updates |
+| `chore` | Maintenance tasks |
 
 Examples:
-- `scene(opening): add bar confrontation`
-- `dialogue(character): refine monologue`
+- `scene(act1): add opening coffee shop sequence`
+- `dialogue(protagonist): polish voice in apartment scenes`
+- `fix(continuity): correct timeline in scenes 15-18`
 - `docs(readme): update cast list`
+
+## Definition of Done
+
+Before submitting a PR, ensure:
+
+- [ ] `npm run validate` passes (format, continuity, spelling)
+- [ ] Self-review completed
+- [ ] Scene has clear purpose (for `scene/*` branches)
+- [ ] Character voice is consistent (for `character/*` branches)
+- [ ] Issue is demonstrably fixed (for `fix/*` branches)
 
 ## Code of Conduct
 
@@ -111,7 +145,7 @@ npm run lint:md         # Markdown linting
 npm run lint:spell      # Spell check
 ```
 
-CI will automatically run validation on all pull requests to `main` and `dev` branches.
+CI will automatically run validation on all pull requests to `main` and `draft/*` branches.
 
 ## Linting Configuration
 

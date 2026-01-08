@@ -2,9 +2,19 @@ name: Validate Project
 
 on:
   push:
-    branches: [main, dev, 'draft/**']
+    branches:
+      - main
+      - 'draft/**'
+      - 'scene/**'
+      - 'revision/**'
+      - 'character/**'
+      - 'structure/**'
+      - 'fix/**'
+      - 'export/**'
   pull_request:
-    branches: [main, dev]
+    branches:
+      - main
+      - 'draft/**'
 
 jobs:
   detect-type:

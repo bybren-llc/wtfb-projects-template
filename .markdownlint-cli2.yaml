@@ -55,6 +55,9 @@ config:
   # Allow multiple consecutive blank lines
   MD012: false
 
+  # Allow flexible table pipe style (for Jekyll templates)
+  MD055: false
+
 globs:
   - "**/*.md"
   - "!node_modules/**"

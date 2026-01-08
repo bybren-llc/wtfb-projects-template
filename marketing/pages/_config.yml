@@ -1,9 +1,10 @@
 # Jekyll configuration for GitHub Pages
 # Data is pulled from ../wtfb-marketing.json
 
-title: WTFB Project
-description: A WTFB Creative Project
+title: WTFB Projects Template
+description: Multi-AI Harness for Creative Projects
 theme: minima
+baseurl: "/wtfb-projects-template"
 
 # Build settings
 markdown: kramdown
@@ -14,25 +15,62 @@ exclude:
   - node_modules
   - vendor
 
-# Custom data (populated by build script from wtfb-marketing.json)
+# Custom data (populated from wtfb-marketing.json)
 project:
-  title: "Project Title"
-  type: "screenplay"
-  status: "development"
-  logline: "Your logline here"
+  id: "wtfb-projects-template"
+  title: "WTFB Projects Template"
+  subtitle: "Multi-AI Harness for Creative Projects"
+  type: "template"
+  status: "beta"
+  logline: "A comprehensive template with 11-agent teams for screenplay, novel, and film production development."
 
 metadata:
-  genres: []
+  genres: ["Development Tools", "Creative Writing", "AI"]
 
 creators:
   primary:
-    name: "Creator Name"
-    role: "Writer"
+    name: "Bybren LLC"
+    role: "Developer"
 
 marketing:
-  tagline: null
+  tagline: "Your creative AI team, ready to work"
   oneSheet:
-    synopsis: "Project synopsis"
+    headline: "Multi-AI Harness for Creative Projects"
+    synopsis: "A comprehensive template featuring 11 specialized agents, 30+ commands, and 17 patterns for screenplay, novel, and film production development."
 
 platform:
-  contactEmail: null
+  contactEmail: "dev@wordstofilmby.com"
+
+funding:
+  enabled: true
+  monthly_tiers:
+    - name: "Supporter"
+      amount: 5
+      description: "Name in README supporters section"
+    - name: "Contributor"
+      amount: 25
+      description: "Logo in README + Discord role"
+    - name: "Patron"
+      amount: 100
+      description: "Logo + Priority support + Beta access"
+    - name: "Partner"
+      amount: 500
+      description: "Large logo + Co-development sessions + Feature requests"
+  onetime_tiers:
+    - name: "Coffee"
+      amount: 10
+      description: "Thank you mention"
+    - name: "Dinner"
+      amount: 50
+      description: "Name in supporters list"
+    - name: "Weekend"
+      amount: 100
+      description: "Logo in README for 3 months"
+    - name: "Champion"
+      amount: 500
+      description: "Logo in README for 1 year"
+
+social:
+  github_sponsors: "https://github.com/sponsors/bybren-llc"
+  paypal: "https://paypal.me/wordstofilmby"
+  kofi: "https://ko-fi.com/wordstofilmby"

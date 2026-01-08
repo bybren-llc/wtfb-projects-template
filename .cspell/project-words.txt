@@ -57,3 +57,7 @@ toml
 zelle
 paypal
 kofi
+
+# Jekyll template keywords
+endfor
+endif

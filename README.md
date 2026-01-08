@@ -1,200 +1,214 @@
-# Project Title (Year)
+# WTFB Projects Template
 
 <p align="center">
-  <img src="marketing/assets/poster.png" alt="Project Title" width="400">
+  <a href="https://github.com/bybren-llc/wtfb-projects-template/releases/latest">
+    <img src="https://img.shields.io/github/v/release/bybren-llc/wtfb-projects-template?include_prereleases&style=flat-square&color=blue" alt="Version">
+  </a>
+  <a href="https://github.com/bybren-llc/wtfb-projects-template/blob/main/LICENSE">
+    <img src="https://img.shields.io/github/license/bybren-llc/wtfb-projects-template?style=flat-square" alt="License">
+  </a>
+  <a href="https://github.com/bybren-llc/wtfb-projects-template/actions/workflows/validate.yml">
+    <img src="https://img.shields.io/github/actions/workflow/status/bybren-llc/wtfb-projects-template/validate.yml?style=flat-square&label=validation" alt="Validation">
+  </a>
+  <a href="https://github.com/bybren-llc/wtfb-projects-template/stargazers">
+    <img src="https://img.shields.io/github/stars/bybren-llc/wtfb-projects-template?style=flat-square" alt="Stars">
+  </a>
 </p>
 
-**[Type]** | **[Genre]** | **[Runtime]**
+<p align="center">
+  <strong>Multi-AI harness template for creative projects</strong><br>
+  Screenplay | Novel | Film Production
+</p>
+
+<p align="center">
+  <a href="#features">Features</a> •
+  <a href="#quick-start">Quick Start</a> •
+  <a href="#ai-harness">AI Harness</a> •
+  <a href="#documentation">Documentation</a> •
+  <a href="#contributing">Contributing</a>
+</p>
 
 ---
 
-## Storyline
+## Features
 
-*Your logline goes here. One to two sentences that capture the essence of your story.*
-
----
-
-## Plot Summary
-
-*A compelling 2-3 paragraph summary of your story. Hook the reader, establish the stakes, but don't spoil the ending.*
-
----
-
-## Cast
-
-| Character | Description |
-|-----------|-------------|
-| **[Name]** | Role, age. Brief character description. |
-| **[Name]** | Role, age. Brief character description. |
+| Feature | Description |
+|---------|-------------|
+| **Multi-AI Support** | Claude Code, Gemini CLI, OpenAI Codex |
+| **11-Agent Team** | Specialized agents for every aspect of creative development |
+| **30+ Commands** | Workflow, writing, analysis, and export commands |
+| **17 Patterns** | Story structure, scene, dialogue, and character patterns |
+| **Upstream Sync** | Weekly template updates via GitHub Actions |
+| **Validation Stack** | Fountain syntax, Markdown lint, spell check |
+| **Marketing Ready** | WTFB platform, GitHub Pages, commerce integration |
 
 ---
 
-## Crew
+## Quick Start
 
-| Role | Name |
-|------|------|
-| **Written by** | Your Name |
-| **Based on** | (if applicable) |
-| **Development** | WTFB Screenwriting Harness |
-| **Production** | Your Company |
+### Option 1: GitHub Template
 
----
+```bash
+# Create a new repository from this template
+gh repo create my-screenplay --template bybren-llc/wtfb-projects-template --clone
+cd my-screenplay
 
-## Technical Specs
+# Initialize project
+./scripts/init-project.sh my-screenplay screenplay
 
-| Specification | Details |
-|---------------|---------|
-| **Runtime** | -- minutes |
-| **Pages** | -- |
-| **Aspect Ratio** | 2.39:1 (Scope) / 1.85:1 (Flat) / 16:9 |
-| **Color** | Color |
-| **Language** | English |
-| **Setting** | Location, Year |
-| **Budget Tier** | $ |
+# Install dependencies
+npm install
+```
 
----
+### Option 2: Clone Directly
 
-## Genres
+```bash
+git clone https://github.com/bybren-llc/wtfb-projects-template.git my-project
+cd my-project
+./scripts/init-project.sh my-project screenplay
+npm install
+```
 
-- Genre 1
-- Genre 2
+### Install Plugin (Claude Code)
 
----
-
-## Themes
-
-- **Theme 1**: Description
-- **Theme 2**: Description
+```bash
+/plugin install wtfb-screenwriting@github.com/bybren-llc/wtfb-claude-marketplace/plugins/screenwriting
+```
 
 ---
 
-## Tone
+## AI Harness
 
-*Describe the tone. Reference comparable films.*
+### Agent Team
 
----
+| Agent | Role | Authority |
+|-------|------|-----------|
+| **Story Architect** | Structure & beat placement | VETO (structure) |
+| **Story Analyst** | Scene-by-scene analysis | Domain |
+| **Dialogue Writer** | Character voice & subtext | Domain |
+| **Scene Writer** | Visual storytelling | Domain |
+| **Continuity Editor** | Timeline & consistency | Domain |
+| **Script Supervisor** | Format compliance | GATE (quality) |
+| **Standards Reviewer** | Industry standards | Domain |
+| **Research Specialist** | Accuracy & authenticity | Domain |
+| **Production Coordinator** | Exports & delivery | Domain |
+| **Session Manager** | Workflow coordination | Workflow |
+| **Scene Annotator** | Notes & organization | Domain |
 
-## Tagline
+### Commands
 
-*"Your tagline here."*
+**Workflow:** `/start-scene`, `/end-session`, `/check-format`, `/check-continuity`, `/stuck`
 
----
+**Writing:** `/new-scene`, `/new-character`, `/format-dialogue`, `/add-transition`
 
-## Keywords
+**Analysis:** `/analyze-character`, `/analyze-structure`, `/scene-list`, `/page-count`, `/arc-check`
 
-`keyword1` `keyword2` `keyword3`
+**Export:** `/export-pdf`, `/export-fdx`, `/export-html`, `/export-all`
 
----
-
-## Did You Know?
-
-### Trivia
-
-- Interesting fact about the project
--
-
-### Quotes
-
-**Character**: "Memorable quote from the script."
-
----
-
-## Connections
-
-### References
-
-- *Film Title* (Year) - What inspired this connection
-
-### Similar Films
-
-- *Film Title* (Year)
-- *Film Title* (Year)
+**WTFB Methodology:** `/writers-room`, `/theme-discovery`, `/story-check`, `/power-analysis`
 
 ---
 
-## Development Notes
+## Project Structure
 
-This project was developed using the **WTFB Screenwriting Harness**, a multi-agent system for professional creative development.
-
-| Agent | Role |
-|-------|------|
-| Story Architect | Structure and beat sheet design |
-| Research Specialist | Technical accuracy |
-| Story Analyst | Audience engagement analysis |
-| Scene Writer | Drafting |
-| Dialogue Writer | Character voice and dialogue |
-| Continuity Editor | Timeline and consistency |
-| Script Supervisor | Format compliance |
-| Standards Reviewer | Industry standards |
-| Production Coordinator | Production package |
-
-### Project Files
-
-| File | Description |
-|------|-------------|
-| `[project].fountain` | Production-ready screenplay |
-| `templates/treatment.md` | Story overview and themes |
-| `templates/beat-sheet.md` | Scene-by-scene structure |
-| `docs/` | Development documentation |
+```
+your-project/
+├── .claude/              # Claude Code harness (via plugin)
+├── .gemini/              # Gemini CLI harness
+├── .wtfb/                # Project configuration
+│   ├── project.json      # Type, plugins, sync settings
+│   └── ai-harness/       # Multi-AI instructions
+├── patterns/             # Story, scene, dialogue, character patterns
+├── templates/            # Beat sheets, registries, worksheets
+├── docs/                 # WORKFLOW.md, CONTRIBUTING.md
+├── exports/              # Generated PDF, FDX, HTML
+├── sourcematerials/      # Research, references
+├── marketing/            # Platform integration
+└── your-screenplay.fountain
+```
 
 ---
 
-## Status
+## Documentation
 
-**Development**
+| Document | Description |
+|----------|-------------|
+| [CLAUDE.md](CLAUDE.md) | Claude Code instructions |
+| [GEMINI.md](GEMINI.md) | Gemini CLI instructions |
+| [AGENTS.md](AGENTS.md) | Full agent team reference |
+| [docs/WORKFLOW.md](docs/WORKFLOW.md) | Git workflow guide |
+| [docs/CONTRIBUTING.md](docs/CONTRIBUTING.md) | Contribution guidelines |
+
+---
+
+## Validation
+
+```bash
+# Run all validation
+npm run validate
+
+# Individual checks
+npm run lint:fountain    # Fountain syntax
+npm run lint:md          # Markdown lint
+npm run lint:spell       # Spell check
+```
+
+---
+
+## Branch Strategy
+
+| Branch | Purpose |
+|--------|---------|
+| `main` | Stable drafts only |
+| `draft/v1`, `draft/v2` | Major versions |
+| `scene/[name]` | Scene-specific work |
+| `revision/[type]` | Revision passes |
+| `character/[name]` | Character development |
 
 ---
 
 ## Contributing
 
-This project uses a **PR-based workflow** for both human collaborators and AI agents.
+See [CONTRIBUTING.md](docs/CONTRIBUTING.md) for guidelines.
 
-### Branch Types
-
-| Type | Use Case |
-|------|----------|
-| `feature/{name}` | New content or scenes |
-| `fix/{issue}` | Targeted fixes |
-| `revision/{type}` | Full-script passes |
-
-### Quick Start
-
-```bash
-# Create a working branch
-git checkout -b feature/your-feature-name
-
-# Make changes, validate
-npm run validate
-
-# Commit
-git commit -m "feat: add your description"
-
-# Create PR
-gh pr create
-```
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'feat: add amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
 
 ---
 
-## Copyright
+## Related Repositories
 
-(c) [Year] [Your Company]. All rights reserved.
+| Repository | Description |
+|------------|-------------|
+| [wtfb-claude-marketplace](https://github.com/bybren-llc/wtfb-claude-marketplace) | Plugin system for Claude Code |
+| [seoul-identity](https://github.com/bybren-llc/seoul-identity) | Example screenplay project |
 
 ---
 
-*This README follows IMDb formatting conventions for project presentation.*
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ---
 
-## WTFB Template
+## Acknowledgments
 
-This project was created from the [WTFB Projects Template](https://github.com/bybren-llc/wtfb-projects-template).
+- [Fountain](https://fountain.io/) - Markup syntax for screenwriting
+- [Claude Code](https://claude.ai/claude-code) - Anthropic's CLI for Claude
+- [Gemini CLI](https://github.com/google-gemini/gemini-cli) - Google's CLI for Gemini
 
-To initialize your own project:
-```bash
-./scripts/init-project.sh your-project-name screenplay
-```
+---
 
-To sync template updates:
-```bash
-./scripts/sync-upstream.sh
-```
+<p align="center">
+  <strong>Words To Film By</strong><br>
+  <a href="https://wordstofilmby.com">Website</a> •
+  <a href="mailto:dev@wordstofilmby.com">Contact</a> •
+  <a href="https://wordstofilmby.com/projects/wtfb-projects-template/sponsor">Sponsor</a>
+</p>
+
+<p align="center">
+  <sub>Built with the WTFB Multi-AI Harness</sub>
+</p>

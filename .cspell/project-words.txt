@@ -1,3 +1,24 @@
 # Project-specific words
 # Add character names, locations, and custom terms here
 
+# WTFB terms
+wordstofilmby
+wtfb
+bybren
+
+# Technical terms
+tshirt
+merch
+printful
+parentheticals
+sourcematerials
+
+# Screenplay terms
+logline
+beatsheet
+slugline
+intercut
+
+# File types
+fdx
+epub

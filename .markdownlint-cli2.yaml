@@ -1,10 +1,11 @@
-# Markdownlint configuration
+# Markdownlint configuration for WTFB projects
+# Relaxed rules for creative/documentation projects
 
 config:
-  # Allow long lines (prose often has long paragraphs)
+  # Disable line length limit - prose has long paragraphs
   MD013: false
 
-  # Allow inline HTML (needed for some formatting)
+  # Allow inline HTML - needed for formatting
   MD033: false
 
   # Allow non-H1 first heading
@@ -13,9 +14,31 @@ config:
   # Allow trailing punctuation in headings
   MD026: false
 
-  # Allow duplicate headings (chapters may have same titles)
-  MD024:
-    siblings_only: true
+  # Allow duplicate headings (templates have repeated section names)
+  MD024: false
+
+  # Relax blank line requirements for readability
+  MD022: false  # Headings don't need blank lines
+  MD031: false  # Fenced code blocks don't need blank lines
+  MD032: false  # Lists don't need blank lines
+
+  # Allow code blocks without language specified
+  MD040: false
+
+  # Allow emphasis as heading (common in creative docs)
+  MD036: false
+
+  # Allow bare URLs
+  MD034: false
+
+  # Allow any ordered list prefix style
+  MD029: false
+
+  # Allow multiple H1 headings (templates may need this)
+  MD025: false
+
+  # Allow mixed heading styles
+  MD003: false
 
 globs:
   - "**/*.md"

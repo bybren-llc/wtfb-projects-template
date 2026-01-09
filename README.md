@@ -202,7 +202,7 @@ MIT License - see [LICENSE](LICENSE) for details.
 <p align="center">
   <strong>Words To Film By</strong><br>
   <a href="https://wordstofilmby.com">Website</a> •
-  <a href="mailto:dev@wordstofilmby.com">Contact</a> •
+  <a href="mailto:scott@wordstofilmby.com">Contact</a> •
   <a href="https://wordstofilmby.com/projects/wtfb-projects-template/sponsor">Sponsor</a>
 </p>
 

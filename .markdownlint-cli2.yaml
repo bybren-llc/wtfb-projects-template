@@ -58,6 +58,9 @@ config:
   # Allow flexible table pipe style (for Jekyll templates)
   MD055: false
 
+  # Allow tables without blank lines around them
+  MD058: false
+
 globs:
   - "**/*.md"
   - "!node_modules/**"

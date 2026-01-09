@@ -15,190 +15,187 @@
   </a>
 </p>
 
-<p align="center">
-  <strong>Multi-AI harness template for creative projects</strong><br>
-  Screenplay | Novel | Film Production
-</p>
+---
 
-<p align="center">
-  <a href="#features">Features</a> •
-  <a href="#quick-start">Quick Start</a> •
-  <a href="#ai-harness">AI Harness</a> •
-  <a href="#documentation">Documentation</a> •
-  <a href="#contributing">Contributing</a>
-</p>
+## What if AI worked like a real creative team?
+
+When you're making a movie, you don't ask one person to write the script, direct, handle the budget, design costumes, AND edit the final cut. You hire a team of specialists who each bring their expertise to the table.
+
+**That's exactly what we built for AI.**
+
+Instead of asking one AI to do everything, we created a system where multiple AI specialists work together—each with their own job, their own expertise, and their own responsibilities.
 
 ---
 
-## Features
+## The Problem
 
-| Feature | Description |
-|---------|-------------|
-| **Multi-AI Support** | Claude Code, Gemini CLI, OpenAI Codex |
-| **11-Agent Team** | Specialized agents for every aspect of creative development |
-| **30+ Commands** | Workflow, writing, analysis, and export commands |
-| **17 Patterns** | Story structure, scene, dialogue, and character patterns |
-| **Upstream Sync** | Weekly template updates via GitHub Actions |
-| **Validation Stack** | Fountain syntax, Markdown lint, spell check |
-| **Marketing Ready** | WTFB platform, GitHub Pages, commerce integration |
+When you ask ChatGPT or Claude to help write a screenplay, you get... fine results. But here's what's missing:
+
+- **No structure** — It doesn't know when to check formatting vs. when to focus on story
+- **No specialization** — It's a generalist pretending to be an expert
+- **No teamwork** — There's no one to catch mistakes or offer a different perspective
+- **No standards** — Every session starts from scratch
+
+It's like hiring one intern to do everything instead of building a real team.
+
+---
+
+## The Solution: An 11-Person AI Team
+
+This template gives you a complete creative team:
+
+| Team Member | What They Do |
+|-------------|--------------|
+| **Story Architect** | Makes sure your story structure works (can veto bad structural changes) |
+| **Dialogue Writer** | Gives each character a unique voice |
+| **Scene Writer** | Describes action and visuals |
+| **Continuity Editor** | Catches timeline mistakes and contradictions |
+| **Script Supervisor** | Ensures proper screenplay format (must approve before export) |
+| **Research Specialist** | Checks facts and accuracy |
+| **Story Analyst** | Scene-by-scene quality analysis |
+| **Standards Reviewer** | Industry best practices |
+| **Production Coordinator** | Handles exports and delivery |
+| **Session Manager** | Coordinates workflow |
+| **Scene Annotator** | Organizes notes and development |
+
+Each one knows their job. Each one has expertise. And they work together.
+
+---
+
+## How It Works
+
+### Like a Hollywood Writers' Room
+
+In Hollywood, writers' rooms have structure:
+
+1. **The showrunner** has final say on story direction
+2. **Senior writers** can push back on bad ideas
+3. **Staff writers** pitch and draft scenes
+4. **The script coordinator** makes sure everything's formatted right
+
+Our AI team works the same way.
+
+### Some Team Members Can Say "Stop"
+
+Not everyone on the team is equal. Some have special authority:
+
+- **The Story Architect** can veto changes that break the story structure
+- **The Script Supervisor** must approve formatting before anything is final
+
+This prevents the AI from making mistakes that would slip through a single-AI system.
+
+### They Share Knowledge
+
+All team members have access to:
+
+- **Industry patterns** — How professional screenplays are structured
+- **Best practices** — What works in dialogue, scene construction, etc.
+- **Your project history** — What's happened so far in your story
+
+They're not starting from zero. They know the craft.
+
+---
+
+## Works With Multiple AI Platforms
+
+We're not locked to one AI:
+
+| Platform | Status |
+|----------|--------|
+| **Claude Code** (Anthropic) | Full support |
+| **Gemini CLI** (Google) | Full support |
+| **OpenAI Codex** | Documented |
+
+Same team structure. Different AI underneath.
 
 ---
 
 ## Quick Start
 
-### Option 1: GitHub Template
+### 1. Create Your Project
 
 ```bash
-# Create a new repository from this template
+# From GitHub template
 gh repo create my-screenplay --template bybren-llc/wtfb-projects-template --clone
 cd my-screenplay
 
-# Initialize project
+# Initialize
 ./scripts/init-project.sh my-screenplay screenplay
-
-# Install dependencies
 npm install
 ```
 
-### Option 2: Clone Directly
-
-```bash
-git clone https://github.com/bybren-llc/wtfb-projects-template.git my-project
-cd my-project
-./scripts/init-project.sh my-project screenplay
-npm install
-```
-
-### Install Plugin (Claude Code)
+### 2. Install the AI Team (Claude Code)
 
 ```bash
 /plugin install wtfb-screenwriting@github.com/bybren-llc/wtfb-claude-marketplace/plugins/screenwriting
 ```
 
----
+### 3. Start Writing
 
-## AI Harness
+```bash
+/start-scene Opening confrontation in the bar
+```
 
-### Agent Team
-
-| Agent | Role | Authority |
-|-------|------|-----------|
-| **Story Architect** | Structure & beat placement | VETO (structure) |
-| **Story Analyst** | Scene-by-scene analysis | Domain |
-| **Dialogue Writer** | Character voice & subtext | Domain |
-| **Scene Writer** | Visual storytelling | Domain |
-| **Continuity Editor** | Timeline & consistency | Domain |
-| **Script Supervisor** | Format compliance | GATE (quality) |
-| **Standards Reviewer** | Industry standards | Domain |
-| **Research Specialist** | Accuracy & authenticity | Domain |
-| **Production Coordinator** | Exports & delivery | Domain |
-| **Session Manager** | Workflow coordination | Workflow |
-| **Scene Annotator** | Notes & organization | Domain |
-
-### Commands
-
-**Workflow:** `/start-scene`, `/end-session`, `/check-format`, `/check-continuity`, `/stuck`
-
-**Writing:** `/new-scene`, `/new-character`, `/format-dialogue`, `/add-transition`
-
-**Analysis:** `/analyze-character`, `/analyze-structure`, `/scene-list`, `/page-count`, `/arc-check`
-
-**Export:** `/export-pdf`, `/export-fdx`, `/export-html`, `/export-all`
-
-**WTFB Methodology:** `/writers-room`, `/theme-discovery`, `/story-check`, `/power-analysis`
+Your AI team is now active. The Story Architect will ensure structure. The Dialogue Writer will refine voices. The Script Supervisor will catch formatting issues. They work together automatically.
 
 ---
 
-## Project Structure
+## What You Get
 
-```
-your-project/
-├── .claude/              # Claude Code harness (via plugin)
-├── .gemini/              # Gemini CLI harness
-├── .wtfb/                # Project configuration
-│   ├── project.json      # Type, plugins, sync settings
-│   └── ai-harness/       # Multi-AI instructions
-├── patterns/             # Story, scene, dialogue, character patterns
-├── templates/            # Beat sheets, registries, worksheets
-├── docs/                 # WORKFLOW.md, CONTRIBUTING.md
-├── exports/              # Generated PDF, FDX, HTML
-├── sourcematerials/      # Research, references
-├── marketing/            # Platform integration
-└── your-screenplay.fountain
-```
+| Feature | Description |
+|---------|-------------|
+| **11 Specialized Agents** | Each with clear responsibilities and authority |
+| **30+ Commands** | `/new-scene`, `/check-format`, `/export-pdf`, and more |
+| **17 Craft Patterns** | Story structure, scene types, dialogue techniques |
+| **Validation Stack** | Fountain syntax, spelling, formatting checks |
+| **Industry Exports** | PDF, Final Draft (FDX), HTML |
+| **Template Sync** | Automatic weekly updates from upstream |
+
+---
+
+## Beyond Screenwriting
+
+The same pattern works for any field that needs expert collaboration:
+
+| Screenwriting | Software Development | Legal | Medical Research |
+|---------------|---------------------|-------|------------------|
+| Story Architect | System Architect | Senior Partner | Principal Investigator |
+| Dialogue Writer | Frontend Developer | Contract Specialist | Literature Reviewer |
+| Scene Writer | Backend Developer | Compliance Officer | Biostatistician |
+| Script Supervisor | QA Tester | Research Associate | Ethics Liaison |
+
+We've already built a [software development harness](https://github.com/bybren-llc/wtfb-claude-marketplace/tree/main/plugins/software-dev). The architecture is universal.
 
 ---
 
 ## Documentation
 
-| Document | Description |
-|----------|-------------|
-| [CLAUDE.md](CLAUDE.md) | Claude Code instructions |
-| [GEMINI.md](GEMINI.md) | Gemini CLI instructions |
-| [AGENTS.md](AGENTS.md) | Full agent team reference |
+| Document | Purpose |
+|----------|---------|
+| [AGENTS.md](AGENTS.md) | Complete agent team reference |
+| [docs/REFERENCE.md](docs/REFERENCE.md) | Commands, patterns, structure |
 | [docs/WORKFLOW.md](docs/WORKFLOW.md) | Git workflow guide |
-| [docs/CONTRIBUTING.md](docs/CONTRIBUTING.md) | Contribution guidelines |
+| [docs/WTFB-HARNESS-PAPER.md](docs/WTFB-HARNESS-PAPER.md) | Architecture deep-dive |
 
 ---
 
-## Validation
+## Example Projects
 
-```bash
-# Run all validation
-npm run validate
-
-# Individual checks
-npm run lint:fountain    # Fountain syntax
-npm run lint:md          # Markdown lint
-npm run lint:spell       # Spell check
-```
-
----
-
-## Branch Strategy
-
-| Branch | Purpose |
-|--------|---------|
-| `main` | Stable drafts only |
-| `draft/v1`, `draft/v2` | Major versions |
-| `scene/[name]` | Scene-specific work |
-| `revision/[type]` | Revision passes |
-| `character/[name]` | Character development |
+| Project | Description |
+|---------|-------------|
+| [seoul-identity](https://github.com/bybren-llc/seoul-identity) | Feature screenplay using full harness |
 
 ---
 
 ## Contributing
 
-See [CONTRIBUTING.md](docs/CONTRIBUTING.md) for guidelines.
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'feat: add amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
-
----
-
-## Related Repositories
-
-| Repository | Description |
-|------------|-------------|
-| [wtfb-claude-marketplace](https://github.com/bybren-llc/wtfb-claude-marketplace) | Plugin system for Claude Code |
-| [seoul-identity](https://github.com/bybren-llc/seoul-identity) | Example screenplay project |
+We welcome contributions. See [CONTRIBUTING.md](docs/CONTRIBUTING.md) for guidelines.
 
 ---
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
----
-
-## Acknowledgments
-
-- [Fountain](https://fountain.io/) - Markup syntax for screenwriting
-- [Claude Code](https://claude.ai/claude-code) - Anthropic's CLI for Claude
-- [Gemini CLI](https://github.com/google-gemini/gemini-cli) - Google's CLI for Gemini
+MIT License - see [LICENSE](LICENSE) for details.
 
 ---
 
@@ -210,5 +207,5 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 </p>
 
 <p align="center">
-  <sub>Built with the WTFB Multi-AI Harness</sub>
+  <em>"Your creative AI team, ready to work."</em>
 </p>

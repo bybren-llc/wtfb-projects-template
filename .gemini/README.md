@@ -9,9 +9,7 @@ This directory contains the multi-agent harness for Google's Gemini CLI.
 ├── agents/          # 11 specialized agent profiles
 ├── commands/        # Slash command definitions (TOML)
 ├── skills/          # Knowledge base modules
-├── README.md        # This file
-├── SETUP.md         # Configuration instructions
-└── TROUBLESHOOTING.md
+└── README.md        # This file
 ```
 
 ## Agent Team

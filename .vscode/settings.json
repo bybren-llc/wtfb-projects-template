@@ -24,7 +24,11 @@
   "[fountain]": {
     "editor.wordWrap": "on",
     "editor.lineNumbers": "on",
-    "editor.quickSuggestions": false
+    "editor.quickSuggestions": {
+      "comments": "off",
+      "strings": "off",
+      "other": "off"
+    }
   },
 
   "[markdown]": {

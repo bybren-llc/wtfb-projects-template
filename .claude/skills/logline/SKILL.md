@@ -1,3 +1,14 @@
+---
+name: logline
+description: |
+  This skill provides logline (hook) writing techniques for screenplays.
+  Covers the four components (characters, conflict, setting, action),
+  formulas for effective loglines, and common mistakes to avoid.
+
+  Use when: distilling a story to its essential hook, preparing pitch
+  materials, testing if a concept is compelling, or marketing a screenplay.
+---
+
 # Logline Skill
 
 ## Invocation Triggers

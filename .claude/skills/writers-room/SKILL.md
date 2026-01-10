@@ -1,3 +1,15 @@
+---
+name: writers-room
+description: |
+  This skill convenes a 6-agent collaborative pre-production session.
+  Story Architect, Dialogue Writer, Scene Writer, Research Specialist,
+  Standards Reviewer, and Continuity Editor pitch their creative visions
+  before writing begins.
+
+  Use when: starting a new screenplay, planning major rewrites,
+  reimagining existing material, or seeking diverse expert perspectives.
+---
+
 # Writer's Room Skill
 
 ## Purpose

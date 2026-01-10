@@ -1,3 +1,14 @@
+---
+name: title-page
+description: |
+  This skill provides Fountain title page formatting and metadata setup.
+  Covers required fields (title, author, contact), optional fields
+  (copyright, draft date, notes), and submission-ready formatting.
+
+  Use when: creating new screenplays, setting up title page metadata,
+  updating screenplay information, or preparing scripts for submission.
+---
+
 # Title Page Skill
 
 ## Invocation Triggers

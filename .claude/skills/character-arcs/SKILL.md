@@ -1,3 +1,14 @@
+---
+name: character-arcs
+description: |
+  This skill provides character arc development frameworks and techniques.
+  Covers the core arc formula (flaw to strength, want to need, lie to truth),
+  positive change arcs, negative arcs, and supporting character development.
+
+  Use when: developing character transformations, tracking character growth,
+  analyzing protagonist journeys, or building supporting character arcs.
+---
+
 # Character Arcs Skill
 
 ## Invocation Triggers

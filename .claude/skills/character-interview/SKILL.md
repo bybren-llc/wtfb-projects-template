@@ -1,3 +1,14 @@
+---
+name: character-interview
+description: |
+  This skill provides the 80-question character interview framework for
+  deep character development. Covers background, psychology, relationships,
+  habits, and motivations to build comprehensive character backstories.
+
+  Use when: creating new characters, deepening existing character understanding,
+  building backstory and motivation, or developing character voice and mannerisms.
+---
+
 # Character Interview Skill
 
 ## Invocation Triggers

@@ -1,3 +1,14 @@
+---
+name: story-check
+description: |
+  This skill provides the 12 critical story questions for screenplay evaluation.
+  Covers concept, theme, audience reaction, beginning, ending, rising tensions,
+  characters, protagonist, motivation, antagonist, and believability.
+
+  Use when: evaluating a screenplay draft, identifying story weaknesses,
+  preparing for rewrites, or validating fundamentals before submission.
+---
+
 # Story Check Skill
 
 ## Invocation Triggers

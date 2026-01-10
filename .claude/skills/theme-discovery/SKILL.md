@@ -1,3 +1,14 @@
+---
+name: theme-discovery
+description: |
+  This skill provides personal theme mining exercises for screenwriters.
+  Covers finding compelling themes from life experiences, analyzing what
+  makes favorite films resonate, and developing thematic depth in stories.
+
+  Use when: starting a new screenplay project, exploring personal themes
+  for story ideas, or developing thematic depth for a story concept.
+---
+
 # Theme Discovery Skill
 
 ## Invocation Triggers

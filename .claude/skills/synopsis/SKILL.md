@@ -1,3 +1,14 @@
+---
+name: synopsis
+description: |
+  This skill provides one-page synopsis writing techniques for screenplays.
+  Covers the five requirements of a good synopsis, synopsis vs treatment
+  comparison, and formatting for submission to producers and executives.
+
+  Use when: preparing submission materials, creating one-page story summaries,
+  pitching to producers or executives, or condensing screenplay for coverage.
+---
+
 # Synopsis Skill
 
 ## Invocation Triggers

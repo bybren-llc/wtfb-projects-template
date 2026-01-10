@@ -1,3 +1,14 @@
+---
+name: character-dialogue
+description: |
+  This skill provides Fountain format character and dialogue formatting rules.
+  Covers character name formatting, extensions (V.O., O.S., CONT'D), dual
+  dialogue, parentheticals, and proper dialogue block structure.
+
+  Use when: introducing characters, writing dialogue blocks, formatting
+  character names, handling dual dialogue, or using character extensions.
+---
+
 # Character & Dialogue Skill
 
 ## Invocation Triggers

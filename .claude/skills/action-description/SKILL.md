@@ -1,3 +1,14 @@
+---
+name: action-description
+description: |
+  This skill provides screenplay action and description writing techniques.
+  Covers present tense formatting, visual storytelling, action sequences,
+  and paragraph structure for scene descriptions.
+
+  Use when: writing scene descriptions, crafting action sequences, describing
+  visual storytelling, or formatting action paragraphs in Fountain format.
+---
+
 # Action & Description Skill
 
 ## Invocation Triggers

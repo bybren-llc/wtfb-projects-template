@@ -1,3 +1,14 @@
+---
+name: power-analysis
+description: |
+  This skill provides power dynamics analysis for screenplay scenes.
+  Covers immediate, imminent, and underlying conflict types, antagonist
+  relationships, and techniques for strengthening tension and stakes.
+
+  Use when: analyzing conflict dynamics in a scene, strengthening antagonist
+  relationships, identifying why a scene feels flat, or developing tension.
+---
+
 # Power Analysis Skill
 
 ## Invocation Triggers

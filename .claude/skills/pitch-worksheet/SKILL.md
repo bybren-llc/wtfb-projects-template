@@ -1,3 +1,14 @@
+---
+name: pitch-worksheet
+description: |
+  This skill provides a structured pitch development worksheet for screenwriters.
+  Covers logline creation, story structure breakdown, character summaries,
+  and commercial viability assessment for pitch meetings.
+
+  Use when: developing a story concept into a pitchable form, preparing for
+  pitch meetings, clarifying story structure, or testing commercial viability.
+---
+
 # Pitch Worksheet Skill
 
 ## Invocation Triggers

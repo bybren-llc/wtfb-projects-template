@@ -1,3 +1,14 @@
+---
+name: fountain-syntax
+description: |
+  This skill provides complete Fountain screenplay format syntax reference.
+  Covers title page, scene headings, action, character names, dialogue,
+  transitions, notes, sections, and all special formatting elements.
+
+  Use when: writing or editing .fountain files, validating screenplay format,
+  converting between formats, or teaching Fountain syntax.
+---
+
 # Fountain Syntax Skill
 
 ## Invocation Triggers

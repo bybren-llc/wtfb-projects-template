@@ -1,3 +1,14 @@
+---
+name: rewriting-methodology
+description: |
+  This skill provides the WTFB 6-step screenplay rewriting process.
+  Covers identifying story threads, evaluating scenes, improving dialogue,
+  polishing action, and preparing for final draft submission.
+
+  Use when: beginning the rewrite process, identifying weak scenes,
+  improving overall script quality, or preparing for final polish.
+---
+
 # Rewriting Methodology Skill
 
 ## Invocation Triggers

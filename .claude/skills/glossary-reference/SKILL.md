@@ -1,3 +1,15 @@
+---
+name: glossary-reference
+description: |
+  This skill provides comprehensive film and television industry terminology.
+  Covers production terms, script coverage vocabulary, development jargon,
+  and professional communication standards from A-Z.
+
+  Use when: encountering unfamiliar industry terminology, writing professional
+  correspondence, understanding script coverage or notes, or communicating
+  with industry professionals.
+---
+
 # Glossary Reference Skill
 
 ## Invocation Triggers

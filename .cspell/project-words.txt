@@ -66,3 +66,40 @@ endif
 # Hollywood terms
 showrunner
 biostatistician
+filmable
+loglines
+pitchable
+setpieces
+reimagining
+misformatted
+hitman
+
+# Film terms and references
+Mcguffin
+Vogler's
+Metafictive
+Sundance
+cardstock
+Acco
+
+# Character names (examples in skills)
+Anakin
+Skywalker
+Palpatine
+Katniss
+CLANE
+NICKY
+ROCKO
+Deadpool
+Bueller
+Napolitano
+Backos
+
+# Movie titles (intentional spelling)
+Happyness
+
+# Screenwriting tools
+afterwriting
+screenplain
+pipx
+Trelby

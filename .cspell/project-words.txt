@@ -41,6 +41,7 @@ multiline
 
 # Git/workflow terms
 husky
+typicode
 precommit
 npx
 lifecycle

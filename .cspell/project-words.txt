@@ -107,3 +107,7 @@ Trelby
 # Writing terms
 comedically
 Vogler
+
+# Claude Code terms
+frontmatter
+agentskills

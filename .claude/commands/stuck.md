@@ -1,3 +1,7 @@
+---
+description: Analyze the current project state and provide helpful, context-aware guidance.
+---
+
 # /stuck
 
 Analyze the current project state and provide helpful, context-aware guidance.

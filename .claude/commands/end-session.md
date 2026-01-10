@@ -1,3 +1,7 @@
+---
+description: Complete a writing session cleanly with proper state preservation.
+---
+
 # /end-session
 
 Complete a writing session cleanly with proper state preservation.

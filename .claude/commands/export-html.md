@@ -1,3 +1,7 @@
+---
+description: Generate an HTML preview of the screenplay.
+---
+
 # /export-html
 
 Generate an HTML preview of the screenplay.

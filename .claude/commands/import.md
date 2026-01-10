@@ -1,3 +1,7 @@
+---
+description: Import an existing screenplay or source material into your project.
+---
+
 # /import
 
 Import an existing screenplay or source material into your project.

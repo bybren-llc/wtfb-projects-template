@@ -1,3 +1,7 @@
+---
+description: Create a compelling logline using the WTFB hook structure.
+---
+
 # /logline
 
 Create a compelling logline using the WTFB hook structure.

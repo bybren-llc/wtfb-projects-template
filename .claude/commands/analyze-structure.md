@@ -1,3 +1,7 @@
+---
+description: Perform three-act structure analysis on the screenplay.
+---
+
 # /analyze-structure
 
 Perform three-act structure analysis on the screenplay.

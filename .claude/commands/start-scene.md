@@ -1,3 +1,7 @@
+---
+description: Begin work on a scene with proper workflow setup.
+---
+
 # /start-scene
 
 Begin work on a scene with proper workflow setup.

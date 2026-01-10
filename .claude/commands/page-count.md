@@ -1,3 +1,7 @@
+---
+description: Estimate the current page count and runtime.
+---
+
 # /page-count
 
 Estimate the current page count and runtime.

@@ -1,3 +1,7 @@
+---
+description: Generate a one-page synopsis per WTFB requirements.
+---
+
 # /synopsis
 
 Generate a one-page synopsis per WTFB requirements.

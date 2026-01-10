@@ -1,3 +1,7 @@
+---
+description: Generate a Final Draft XML file from the Fountain screenplay.
+---
+
 # /export-fdx
 
 Generate a Final Draft XML file from the Fountain screenplay.

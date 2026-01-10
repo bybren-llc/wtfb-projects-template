@@ -1,3 +1,7 @@
+---
+description: Generate a structured pitch worksheet for your screenplay concept.
+---
+
 # /pitch-worksheet
 
 Generate a structured pitch worksheet for your screenplay concept.

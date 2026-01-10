@@ -103,3 +103,7 @@ afterwriting
 screenplain
 pipx
 Trelby
+
+# Writing terms
+comedically
+Vogler

@@ -1,3 +1,7 @@
+---
+description: Insert a transition element in proper Fountain format.
+---
+
 # /add-transition
 
 Insert a transition element in proper Fountain format.

@@ -1,3 +1,7 @@
+---
+description: Analyze a character's arc, appearances, and development.
+---
+
 # /analyze-character
 
 Analyze a character's arc, appearances, and development.

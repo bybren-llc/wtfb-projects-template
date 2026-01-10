@@ -1,3 +1,7 @@
+---
+description: Analyze power dynamics and conflict structure in your screenplay.
+---
+
 # /power-analysis
 
 Analyze power dynamics and conflict structure in your screenplay.

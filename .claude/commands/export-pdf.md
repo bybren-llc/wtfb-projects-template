@@ -1,3 +1,7 @@
+---
+description: Generate a formatted PDF from the Fountain screenplay.
+---
+
 # /export-pdf
 
 Generate a formatted PDF from the Fountain screenplay.

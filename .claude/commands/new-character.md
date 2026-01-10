@@ -1,3 +1,7 @@
+---
+description: Add a new character with proper introduction and tracking.
+---
+
 # /new-character
 
 Add a new character with proper introduction and tracking.

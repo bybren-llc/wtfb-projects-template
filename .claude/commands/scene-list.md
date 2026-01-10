@@ -1,3 +1,7 @@
+---
+description: List all scenes with page estimates and metadata.
+---
+
 # /scene-list
 
 List all scenes with page estimates and metadata.

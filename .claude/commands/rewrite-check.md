@@ -1,3 +1,7 @@
+---
+description: Apply the WTFB 6-step rewriting methodology to your screenplay.
+---
+
 # /rewrite-check
 
 Apply the WTFB 6-step rewriting methodology to your screenplay.

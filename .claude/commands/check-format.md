@@ -1,3 +1,7 @@
+---
+description: Validate Fountain syntax and formatting.
+---
+
 # /check-format
 
 Validate Fountain syntax and formatting.

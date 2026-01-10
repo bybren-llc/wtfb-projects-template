@@ -1,3 +1,7 @@
+---
+description: Add a Fountain note (hidden in output) to the screenplay.
+---
+
 # /add-note
 
 Add a Fountain note (hidden in output) to the screenplay.

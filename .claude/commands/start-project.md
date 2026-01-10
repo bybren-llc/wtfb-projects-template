@@ -1,3 +1,7 @@
+---
+description: Welcome a new user and help them set up their screenplay project.
+---
+
 # /start-project
 
 Welcome a new user and help them set up their screenplay project.

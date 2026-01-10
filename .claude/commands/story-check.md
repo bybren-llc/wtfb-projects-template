@@ -1,3 +1,7 @@
+---
+description: Validate your screenplay against the 12 essential story questions.
+---
+
 # /story-check
 
 Validate your screenplay against the 12 essential story questions.

@@ -1,3 +1,7 @@
+---
+description: Validate consistency across the screenplay.
+---
+
 # /check-continuity
 
 Validate consistency across the screenplay.

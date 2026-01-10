@@ -1,3 +1,7 @@
+---
+description: Generate all output formats (PDF, FDX, HTML) at once.
+---
+
 # /export-all
 
 Generate all output formats (PDF, FDX, HTML) at once.

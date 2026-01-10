@@ -1,3 +1,7 @@
+---
+description: Conduct an in-depth character interview using the 80-question WTFB methodology.
+---
+
 # /character-interview
 
 Conduct an in-depth character interview using the 80-question WTFB methodology.

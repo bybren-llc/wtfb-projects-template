@@ -1,3 +1,7 @@
+---
+description: Run an interactive theme exploration exercise to discover compelling story themes from personal experience and movie analysis.
+---
+
 # /theme-discovery
 
 Run an interactive theme exploration exercise to discover compelling story themes from personal experience and movie analysis.

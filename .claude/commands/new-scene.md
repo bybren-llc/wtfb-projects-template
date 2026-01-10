@@ -1,3 +1,7 @@
+---
+description: Insert a properly formatted scene heading.
+---
+
 # /new-scene
 
 Insert a properly formatted scene heading.

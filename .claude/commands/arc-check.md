@@ -1,3 +1,7 @@
+---
+description: Track and validate character arcs throughout your screenplay.
+---
+
 # /arc-check
 
 Track and validate character arcs throughout your screenplay.

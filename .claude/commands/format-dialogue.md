@@ -1,3 +1,7 @@
+---
+description: Structure a dialogue block correctly in Fountain format.
+---
+
 # /format-dialogue
 
 Structure a dialogue block correctly in Fountain format.

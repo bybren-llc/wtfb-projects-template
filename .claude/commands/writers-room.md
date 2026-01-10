@@ -1,3 +1,7 @@
+---
+description: Convene a collaborative pre-production session where 6 specialized agents pitch their creative visions before writing begins.
+---
+
 # /writers-room
 
 Convene a collaborative pre-production session where 6 specialized agents pitch their creative visions before writing begins.

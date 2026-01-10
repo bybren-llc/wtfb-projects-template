@@ -1,6 +1,9 @@
 # WTFB Projects Template
 
 <p align="center">
+  <a href="https://deepwiki.com/bybren-llc/wtfb-projects-template">
+    <img src="https://img.shields.io/badge/DeepWiki-AI_Docs-blue?style=flat-square&logo=artificial-intelligence" alt="DeepWiki">
+  </a>
   <a href="https://github.com/bybren-llc/wtfb-projects-template/releases/latest">
     <img src="https://img.shields.io/github/v/release/bybren-llc/wtfb-projects-template?include_prereleases&style=flat-square&color=blue" alt="Version">
   </a>
@@ -14,6 +17,8 @@
     <img src="https://img.shields.io/github/stars/bybren-llc/wtfb-projects-template?style=flat-square" alt="Stars">
   </a>
 </p>
+
+> **AI Agents:** For comprehensive documentation, visit [DeepWiki](https://deepwiki.com/bybren-llc/wtfb-projects-template)
 
 ---
 
@@ -155,6 +160,29 @@ Your AI team is now active. The Story Architect will ensure structure. The Dialo
 
 ---
 
+## Why WTFB? (Competitive Analysis)
+
+We did the research. Here's how WTFB compares to alternatives:
+
+| vs. Competition | WTFB Advantage |
+|-----------------|----------------|
+| **vs. Final Draft / Movie Magic** | They have no AI. We have 11 specialized agents. |
+| **vs. AI Writing Tools** | They're single AI. We're multi-agent with authority controls. |
+| **vs. CrewAI / AutoGen** | They're general-purpose. We have 24 craft skill modules. |
+| **vs. All of Them** | We're open source, extensible, and export to industry formats. |
+
+**Unique to WTFB:**
+
+- Tiered authority system (veto/gate powers)
+- Enterprise self-hosting with private workflows
+- Community marketplace for custom tools
+- Fountain format: open, portable, AI-friendly
+- VS Code Live Share for real-time collaboration
+
+> **Full Analysis:** [Competitive Analysis: WTFB Multi-Agent Harness](docs/COMPETITIVE-ANALYSIS-MULTI-AGENT-HARNESS.md)
+
+---
+
 ## Global CLI
 
 Use our tools across any project:
@@ -198,6 +226,7 @@ We've already built a [software development harness](https://github.com/bybren-l
 | [docs/REFERENCE.md](docs/REFERENCE.md) | Commands, patterns, structure |
 | [docs/WORKFLOW.md](docs/WORKFLOW.md) | Git workflow guide |
 | [docs/WTFB-HARNESS-PAPER.md](docs/WTFB-HARNESS-PAPER.md) | Architecture deep-dive |
+| [docs/COMPETITIVE-ANALYSIS-MULTI-AGENT-HARNESS.md](docs/COMPETITIVE-ANALYSIS-MULTI-AGENT-HARNESS.md) | Market analysis & positioning |
 
 ---
 

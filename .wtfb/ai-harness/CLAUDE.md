@@ -10,6 +10,15 @@ This is a **WTFB (Words To Film By)** creative project. Check `.wtfb/project.jso
 
 This project uses an 11-agent team for collaborative development. See `AGENTS.md` for the complete team reference.
 
+### Agents as UX
+
+Writers don't need to learn CLI commands. **Agents handle all tooling via `@wtfb/cli`.**
+
+- When a writer asks to export, the Production Coordinator runs `wtfb export-pdf`
+- When a writer asks to validate, the Script Supervisor runs `wtfb validate`
+
+The CLI is infrastructure for agents, not interface for humans.
+
 ### Harness Location
 - **Agents**: `.claude/agents/` - 11 specialized agent profiles
 - **Commands**: `.claude/commands/` - Slash command definitions

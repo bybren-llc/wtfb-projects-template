@@ -40,6 +40,45 @@ This project uses an 11-agent team for collaborative creative development.
 * Has veto/gate authority
 ```
 
+## Agents as UX: The Writer's Interface
+
+Writers don't need to learn CLI commands. They just talk.
+
+The agents handle all tooling via `@wtfb/cli`. The CLI is infrastructure, not interface.
+
+### How It Works
+
+```
+Writer (conversation)
+       ↓
+   AI Agent (understands intent)
+       ↓
+   WTFB Agents (craft expertise + authority)
+       ↓
+   @wtfb/cli via Bash (execution)
+       ↓
+   Output (PDF, FDX, HTML, validated files)
+```
+
+### Example Interactions
+
+| Writer Says | Agent Runs |
+|-------------|------------|
+| "Export my script to PDF" | `wtfb export-pdf` |
+| "Check my formatting" | `wtfb validate` |
+| "I need a Final Draft file" | `wtfb export-fdx` |
+| "Make sure everything looks right" | `wtfb validate --fountain` |
+| "Give me an HTML preview" | `wtfb export-html` |
+
+### Which Agents Use the CLI?
+
+| Agent | CLI Commands |
+|-------|--------------|
+| **Script Supervisor** | `wtfb validate`, `wtfb validate --fountain` |
+| **Production Coordinator** | `wtfb export-pdf`, `wtfb export-fdx`, `wtfb export-html` |
+
+Other agents focus on craft (story, dialogue, continuity) and don't need CLI tools.
+
 ## Agent Profiles
 
 ### Story & Structure

@@ -12,7 +12,8 @@
     "beatsheet",
     "markdownlint",
     "cheddarfox",
-    "jscottgraham"
+    "jscottgraham",
+    "GHSA"
   ],
   "dictionaries": [
     "project-words"

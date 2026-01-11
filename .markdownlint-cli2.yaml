@@ -61,6 +61,9 @@ config:
   # Allow tables without blank lines around them
   MD058: false
 
+  # Allow compact table style (new in markdownlint 0.40.0)
+  MD060: false
+
 globs:
   - "**/*.md"
   - "!node_modules/**"

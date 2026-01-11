@@ -5,6 +5,22 @@ All notable changes to WTFB Projects Template will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.3.2] - 2026-01-11
+
+### Security
+
+- **js-yaml vulnerability fix**: Updated markdownlint-cli2 from 0.15.0 to 0.20.0
+  - Fixes GHSA-mh29-5h37-fv8m (prototype pollution in js-yaml merge)
+  - Resolves moderate severity Dependabot alert
+
+### Changed
+
+- **markdownlint config**: Disabled MD060 (table-column-style) rule
+  - New rule in markdownlint 0.40.0 conflicts with compact table formatting
+  - Maintains backward compatibility with existing agent/skill documentation
+
+---
+
 ## [1.3.1] - 2026-01-11
 
 ### Added

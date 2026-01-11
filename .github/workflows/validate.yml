@@ -148,3 +148,21 @@ jobs:
           if [ -f "marketing/wtfb-marketing.json" ]; then
             jq empty marketing/wtfb-marketing.json && echo "wtfb-marketing.json is valid JSON"
           fi
+
+  validate-capabilities:
+    name: Validate Skills & Commands
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Validate capabilities
+        run: npm run validate:capabilities

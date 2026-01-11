@@ -111,11 +111,66 @@ Pattern: `type(scope): description`
 | `docs` | Documentation updates |
 | `chore` | Maintenance tasks |
 
+**Additional types for template contributions:**
+- `skill` - New or modified skill
+- `command` - New or modified command
+- `ci` - CI/CD changes
+
 Examples:
 - `scene(act1): add opening coffee shop sequence`
 - `dialogue(protagonist): polish voice in apartment scenes`
 - `fix(continuity): correct timeline in scenes 15-18`
 - `docs(readme): update cast list`
+- `skill(story-structure): add midpoint beat analysis`
+- `command(export-pdf): fix output path handling`
+
+## PR Title Format
+
+PR titles must match: `type(scope): description`
+
+This is enforced by CI. Examples:
+- `feat(skill): add advanced-structure skill`
+- `fix(command): correct export-pdf output path`
+- `docs(contributing): add spoke author rules`
+
+## Contributing Skills & Commands
+
+### Hub Contributions (This Template)
+
+When contributing skills or commands to this template repository:
+
+1. **Frontmatter Required**: All skills must have YAML frontmatter
+2. **wtfbId Format**: Use `wtfb:{name}` (e.g., `wtfb:story-structure`)
+3. **Name Matching**: `name` field must match directory name exactly
+4. **Description Format**: Include "Use when:" trigger conditions
+
+Example skill frontmatter:
+```yaml
+---
+name: my-skill
+wtfbId: wtfb:my-skill
+description: |
+  This skill provides...
+
+  Use when: you need to...
+---
+```
+
+### Spoke Contributions (Marketplace Plugins)
+
+When contributing to marketplace plugins:
+
+1. **Unique Namespace**: Use `{your-plugin}:{name}` (NOT `wtfb:`)
+2. **Relationship Declared**: Use `provides`, `extends`, or `replaces`
+3. **Compatibility**: Include `compat.template` version range
+
+Reserved namespaces (do not use):
+- `wtfb:` - Template hub only
+- `wtfb-screenwriting:` - Official WTFB plugin
+- `wtfb-novel-writing:` - Official WTFB plugin
+- `wtfb-film-production:` - Official WTFB plugin
+
+See [Capability Contract](guides/CAPABILITY_CONTRACT.md) for full specification.
 
 ## Definition of Done
 
@@ -139,13 +194,36 @@ Before submitting a PR, ensure:
 Before submitting, run validation to catch issues:
 
 ```bash
-npm run validate        # Full validation (runs all linters)
-npm run lint:fountain   # Fountain syntax (screenplays only)
-npm run lint:md         # Markdown linting
-npm run lint:spell      # Spell check
+npm run validate              # Full validation (runs all linters + capability check)
+npm run validate:capabilities # Skill/command compliance only
+npm run lint:fountain         # Fountain syntax (screenplays only)
+npm run lint:md               # Markdown linting
+npm run lint:spell            # Spell check
 ```
 
 CI will automatically run validation on all pull requests to `main` and `draft/*` branches.
+
+### Capability Validation
+
+For skill/command contributions, `validate:capabilities` checks:
+
+**Skills (hard errors):**
+- Frontmatter exists (file starts with `---`)
+- `name` matches directory name
+- `wtfbId` follows correct namespace format
+- Valid YAML syntax
+
+**Skills (warnings):**
+- `description` includes "Use when:" clause
+- `description` under 1024 characters
+
+**Commands (hard errors):**
+- H1 heading matches filename (`# /command-name`)
+
+**Commands (warnings):**
+- Frontmatter recommended
+- `description` under 100 characters
+- `description` starts with imperative verb
 
 ## Linting Configuration
 

@@ -15,11 +15,21 @@ Before starting, ensure you have:
 | **Git** | `git --version` | [git-scm.com](https://git-scm.com) |
 | **GitHub CLI** | `gh --version` | [cli.github.com](https://cli.github.com) |
 | **Node.js 18+** | `node --version` | [nodejs.org](https://nodejs.org) |
+| **Claude Code** | `claude --version` | `npm install -g @anthropic-ai/claude-code` |
 | **GitHub Account** | - | [github.com](https://github.com) |
 
 **GitHub CLI Authentication:**
 ```bash
 gh auth login
+```
+
+**Claude Code Setup:**
+```bash
+# Install Claude Code globally
+npm install -g @anthropic-ai/claude-code
+
+# Authenticate with your Anthropic API key
+claude auth
 ```
 
 ---

@@ -8,8 +8,11 @@
 - [ ] Dialogue revision
 - [ ] Structure change
 - [ ] Format/style fix
+- [ ] Skill addition/update
+- [ ] Command addition/update
 - [ ] Documentation
 - [ ] Template/workflow update
+- [ ] CI/CD changes
 
 ## Changes Made
 
@@ -17,22 +20,36 @@
 
 -
 
-## Validation
+## Validation Checklist
 
 - [ ] Ran `npm run validate` successfully
+- [ ] PR title matches format: `type(scope): description`
+
+### For Skill/Command Changes
+
+- [ ] Frontmatter includes required fields (`name`, `wtfbId`, `description`)
+- [ ] `name` matches directory/filename
+- [ ] `wtfbId` follows `wtfb:{name}` format (template) or `{plugin}:{name}` (marketplace)
+- [ ] `description` includes "Use when:" clause (skills)
+
+### For Creative Content
+
 - [ ] Checked format (`/check-format`)
-- [ ] Reviewed in export format (PDF/HTML)
-
-## Continuity Check
-
 - [ ] Timeline consistency verified
 - [ ] Character knowledge states correct
-- [ ] Props/locations consistent
-- [ ] No dangling references
+- [ ] Reviewed in export format (PDF/HTML) if applicable
+
+## Breaking Changes
+
+- [ ] No breaking changes
+- [ ] Breaking changes documented below:
+
+<!-- If breaking changes, describe them here -->
 
 ## Notes
 
 <!-- Any additional context for reviewers -->
 
 ---
-*Using WTFB Screenwriting Harness*
+
+*No ticket required for OSS contributions. Built with [WTFB Screenwriting Harness](https://github.com/bybren-llc/wtfb-projects-template).*

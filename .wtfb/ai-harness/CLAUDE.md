@@ -188,13 +188,28 @@ marketing/                 Platform integration
 
 Run validation before commits:
 ```bash
-npm run validate        # Full validation
-npm run lint:fountain   # Fountain syntax only (screenplay)
-npm run lint:md         # Markdown linting
-npm run lint:spell      # Spell check
+npm run validate              # Full validation (all linters + capability check)
+npm run validate:capabilities # Skill/command compliance only
+npm run lint:fountain         # Fountain syntax only (screenplay)
+npm run lint:md               # Markdown linting
+npm run lint:spell            # Spell check
 ```
 
 Pre-commit hooks run automatically on staged files.
+
+---
+
+## CI/CD
+
+All PRs are automatically validated for:
+- Skill frontmatter compliance (name, wtfbId, description)
+- Command format compliance (heading, description)
+- Markdown and spelling
+- PR title format: `type(scope): description`
+
+Valid PR title types: `feat`, `fix`, `docs`, `refactor`, `chore`, `skill`, `command`, `ci`
+
+Example: `feat(skill): add advanced-structure skill`
 
 ---
 

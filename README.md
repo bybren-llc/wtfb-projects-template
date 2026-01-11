@@ -122,7 +122,14 @@ Same team structure. Different AI underneath.
 
 > **New to WTFB?** See the full [QUICKSTART Guide](docs/QUICKSTART.md) for step-by-step instructions with screenshots and troubleshooting.
 
-### 1. Create Your Project
+### 1. Install Claude Code
+
+```bash
+npm install -g @anthropic-ai/claude-code
+claude auth  # Authenticate with your Anthropic API key
+```
+
+### 2. Create Your Project
 
 ```bash
 # From GitHub template
@@ -134,13 +141,14 @@ cd my-screenplay
 npm install
 ```
 
-### 2. Install the AI Team (Claude Code)
+### 3. Install the AI Team Plugin
 
 ```bash
+claude  # Start Claude Code in your project
 /plugin install wtfb-screenwriting@github.com/bybren-llc/wtfb-claude-marketplace/plugins/screenwriting
 ```
 
-### 3. Start Writing
+### 4. Start Writing
 
 ```bash
 /start-scene Opening confrontation in the bar

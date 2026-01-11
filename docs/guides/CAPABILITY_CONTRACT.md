@@ -245,6 +245,54 @@ description: ...
 # No provides/extends/replaces declared
 ```
 
+## Third-Party Plugin Author Rules
+
+To enable multiple marketplaces to coexist without conflicts, third-party plugin authors must follow these rules:
+
+### Namespace Uniqueness (Required)
+
+Every third-party plugin must use a unique namespace prefix in `wtfbId`:
+
+| Context | wtfbId Format | Example |
+|---------|---------------|---------|
+| Template hub | `wtfb:{name}` | `wtfb:story-structure` |
+| Official WTFB plugins | `wtfb-{plugin}:{name}` | `wtfb-screenwriting:advanced-structure` |
+| Third-party plugins | `{vendor}:{name}` | `acme-writing:custom-beats` |
+
+**Reserved namespaces** (do not use):
+- `wtfb:` - Template hub only
+- `wtfb-screenwriting:` - Official WTFB plugin
+- `wtfb-novel-writing:` - Official WTFB plugin
+- `wtfb-film-production:` - Official WTFB plugin
+
+### Relationship Contract (Required for Marketplace)
+
+Every marketplace skill that touches a template capability must declare exactly one of:
+- `provides` - New capability not in template
+- `extends` - Builds on template capability
+- `replaces` - Supersedes template capability
+
+### Compatibility Gates (Recommended)
+
+Include `compat.template` semver range on all marketplace skills:
+
+```yaml
+compat:
+  template: ">=1.0.0 <2.0.0"
+```
+
+### Collision Resolution
+
+If two plugins extend/replace the same hub `wtfbId`:
+- Winner determined by `.wtfb/project.json` `plugins.precedence`
+- Later in array wins
+- Plugin authors must not assume they always win
+
+### CI Scope
+
+- **Template CI**: Enforces hub rules only (`wtfb:` + skill compliance)
+- **Marketplace CI**: Enforces spoke rules (`{plugin}:` + relationship fields + compat)
+
 ## Reference
 
 - [Claude Code Plugin Overview](https://deepwiki.com/anthropics/claude-plugins-official/1-overview)

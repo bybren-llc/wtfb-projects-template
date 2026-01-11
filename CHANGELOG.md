@@ -5,6 +5,49 @@ All notable changes to WTFB Projects Template will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.4.0] - 2026-01-11
+
+### Added
+
+- **Capability Validation Script** (`scripts/validate-capabilities.js`)
+  - Validates all 24 skills and 30 commands against compliance checklist
+  - Hard errors for: missing frontmatter, name mismatch, invalid wtfbId, invalid YAML
+  - Warnings for: missing "Use when:", description length, imperative voice
+  - Supports `--mode=template|marketplace` for hub/spoke reuse
+  - New npm script: `npm run validate:capabilities`
+
+- **PR Validation Workflow** (`.github/workflows/pr-validation.yml`)
+  - Enforces PR title format: `type(scope): description`
+  - API-only (no checkout, no fork code execution)
+  - Minimal permissions for security
+
+- **Spoke Author Contract Documentation**
+  - Third-party plugin namespace rules in CAPABILITY_CONTRACT.md
+  - Multi-marketplace coexistence guide in PLUGIN_ARCHITECTURE.md
+  - Hub vs spoke contribution rules in CONTRIBUTING.md
+
+- **Claude Code Installation Instructions**
+  - Added to QUICKSTART.md prerequisites
+  - Added to README.md Quick Start section
+
+### Changed
+
+- **validate.yml**: Added `validate-capabilities` job
+- **PR Template**: Added skill/command compliance checklist
+- **CLAUDE.md**: Added CI/CD section with validation commands
+- **AGENTS.md**: Added Agent Contributions to CI section
+- **CONTRIBUTING.md**: Added PR title format and capability validation docs
+- **package.json**: Updated validate script to include capability check
+
+### OSS-Friendly Design
+
+- PR title validation: hard error (blocks merge)
+- Commit message validation: skipped (maintainers squash-merge)
+- Rebase enforcement: skipped (reduces contributor friction)
+- Subjective checks (imperative voice, description length): warnings only
+
+---
+
 ## [1.3.2] - 2026-01-11
 
 ### Security

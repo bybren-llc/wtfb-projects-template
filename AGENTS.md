@@ -156,6 +156,19 @@ Within their domains, all agents have equal voice:
 - Cross-domain discussions welcome collaboration
 - Veto authority used sparingly and with justification
 
+## Agent Contributions to CI
+
+The CI pipeline validates work from specialized agents:
+
+| Agent | CI Responsibility |
+|-------|-------------------|
+| **Script Supervisor** | Format validation approval - Fountain syntax, heading format |
+| **Standards Reviewer** | Capability compliance - skill/command frontmatter validation |
+| **Production Coordinator** | Export artifact verification - PDF, FDX, HTML generation |
+| **Continuity Editor** | Consistency checks - timeline, character, prop validation |
+
+The validation script (`npm run validate:capabilities`) enforces standards that these agents would catch manually.
+
 ## See Also
 
 - `.claude/agents/` - Claude agent definitions

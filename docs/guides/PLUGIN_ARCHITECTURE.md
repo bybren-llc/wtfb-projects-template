@@ -298,6 +298,55 @@ Plugins are validated for:
 | Invalid reference | extends/replaces points to non-existent capability | Check template wtfbId exists |
 | Compatibility mismatch | Template version out of range | Update compat.template |
 
+## How Multiple Marketplaces Coexist
+
+The WTFB architecture supports multiple independent marketplaces (official and third-party) through namespace isolation and precedence control.
+
+### Namespace Isolation
+
+Each marketplace uses a unique namespace prefix:
+
+```
+Template (Hub):       wtfb:story-structure
+Official Plugin:      wtfb-screenwriting:advanced-structure
+Third-Party Plugin:   acme-writing:custom-beats
+```
+
+This prevents identifier collisions. A project can install plugins from multiple sources without conflicts.
+
+### Precedence Control
+
+When plugins provide overlapping capabilities, the project owner controls resolution:
+
+```json
+{
+  "plugins": {
+    "installed": ["wtfb-screenwriting", "acme-writing"],
+    "precedence": ["acme-writing", "wtfb-screenwriting"]
+  }
+}
+```
+
+Later entries in `precedence` win for capabilities with the same base `wtfbId`.
+
+### Conflict Scenarios
+
+| Scenario | Resolution |
+|----------|------------|
+| Two plugins `provides` same wtfbId | Error: duplicate capability |
+| Two plugins `extends` same base | Both available; precedence determines default |
+| Two plugins `replaces` same base | Later in precedence wins |
+| Plugin extends non-existent base | Error: invalid reference |
+
+### Third-Party Author Requirements
+
+1. Use a unique vendor namespace (e.g., `acme-writing:`)
+2. Never use reserved namespaces (`wtfb:`, `wtfb-screenwriting:`, etc.)
+3. Declare relationships explicitly (`provides`, `extends`, `replaces`)
+4. Include `compat.template` version range
+
+See [Capability Contract - Third-Party Plugin Author Rules](./CAPABILITY_CONTRACT.md#third-party-plugin-author-rules) for full specification.
+
 ## Related Documentation
 
 - [Capability Contract](./CAPABILITY_CONTRACT.md) - Schema and rules for capabilities

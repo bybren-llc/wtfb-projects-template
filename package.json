@@ -1,10 +1,11 @@
 {
   "name": "wtfb-project",
-  "version": "1.3.2",
+  "version": "1.4.0",
   "description": "WTFB Creative Project",
   "private": true,
   "scripts": {
-    "validate": "npm run lint:fountain && npm run lint:md && npm run lint:spell",
+    "validate": "npm run lint:fountain && npm run lint:md && npm run lint:spell && npm run validate:capabilities",
+    "validate:capabilities": "node scripts/validate-capabilities.js",
     "lint:fountain": "node scripts/validate-fountain.js",
     "lint:md": "markdownlint-cli2 '**/*.md' '#node_modules'",
     "lint:spell": "cspell '**/*.{md,fountain,txt}' --no-progress",

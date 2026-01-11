@@ -1,0 +1,45 @@
+name: PR Validation
+
+on:
+  pull_request:
+    types: [opened, edited, synchronize]
+
+# Minimal permissions - API only, no code execution from forks
+permissions:
+  pull-requests: read
+
+jobs:
+  validate-pr-title:
+    name: Validate PR Title
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check PR title format
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const title = context.payload.pull_request.title;
+
+            // Pattern: type(scope): description
+            // Types: feat, fix, docs, refactor, chore, skill, command, ci
+            // Scope is optional but recommended
+            const pattern = /^(feat|fix|docs|refactor|chore|skill|command|ci)(\(.+\))?: .+$/;
+
+            if (!pattern.test(title)) {
+              core.setFailed(`
+            PR title must match format: type(scope): description
+
+            Valid types: feat, fix, docs, refactor, chore, skill, command, ci
+
+            Recommended scopes: skill name, command name, or area (e.g., ci, contributing)
+
+            Examples:
+              - feat(skill): add advanced-structure skill
+              - fix(command): correct export-pdf output path
+              - docs(contributing): add spoke author rules
+              - chore(ci): update validation workflow
+
+            Your title: "${title}"
+              `);
+            } else {
+              console.log(`PR title is valid: "${title}"`);
+            }

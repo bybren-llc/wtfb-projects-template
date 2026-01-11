@@ -1,5 +1,6 @@
 ---
 name: continuity-tracking
+wtfbId: wtfb:continuity-tracking
 description: |
   This skill provides screenplay continuity tracking systems and templates.
   Covers character registry, timeline registry, location registry, prop

@@ -1,5 +1,6 @@
 ---
 name: story-structure
+wtfbId: wtfb:story-structure
 description: |
   This skill provides three-act screenplay structure with beat placement.
   Covers opening image, inciting incident, midpoint, all is lost, climax,

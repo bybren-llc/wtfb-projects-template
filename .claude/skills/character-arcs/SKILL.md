@@ -1,5 +1,6 @@
 ---
 name: character-arcs
+wtfbId: wtfb:character-arcs
 description: |
   This skill provides character arc development frameworks and techniques.
   Covers the core arc formula (flaw to strength, want to need, lie to truth),

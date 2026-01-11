@@ -1,5 +1,6 @@
 ---
 name: glossary-reference
+wtfbId: wtfb:glossary-reference
 description: |
   This skill provides comprehensive film and television industry terminology.
   Covers production terms, script coverage vocabulary, development jargon,

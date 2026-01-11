@@ -1,5 +1,6 @@
 ---
 name: character-interview
+wtfbId: wtfb:character-interview
 description: |
   This skill provides the 80-question character interview framework for
   deep character development. Covers background, psychology, relationships,

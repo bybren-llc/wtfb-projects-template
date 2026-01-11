@@ -1,5 +1,6 @@
 ---
 name: title-page
+wtfbId: wtfb:title-page
 description: |
   This skill provides Fountain title page formatting and metadata setup.
   Covers required fields (title, author, contact), optional fields

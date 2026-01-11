@@ -1,5 +1,6 @@
 ---
 name: transitions
+wtfbId: wtfb:transitions
 description: |
   This skill provides screenplay transition formatting and conventions.
   Covers CUT TO, DISSOLVE TO, FADE IN/OUT, SMASH CUT, and when to use

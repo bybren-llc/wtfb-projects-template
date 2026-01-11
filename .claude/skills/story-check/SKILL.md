@@ -1,5 +1,6 @@
 ---
 name: story-check
+wtfbId: wtfb:story-check
 description: |
   This skill provides the 12 critical story questions for screenplay evaluation.
   Covers concept, theme, audience reaction, beginning, ending, rising tensions,

@@ -1,5 +1,6 @@
 ---
 name: character-dialogue
+wtfbId: wtfb:character-dialogue
 description: |
   This skill provides Fountain format character and dialogue formatting rules.
   Covers character name formatting, extensions (V.O., O.S., CONT'D), dual

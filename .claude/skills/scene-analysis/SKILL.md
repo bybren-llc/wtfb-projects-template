@@ -1,5 +1,6 @@
 ---
 name: scene-analysis
+wtfbId: wtfb:scene-analysis
 description: |
   This skill provides scene-by-scene analysis techniques for screenplays.
   Covers scene anatomy, beat breakdown, pacing evaluation, and the core

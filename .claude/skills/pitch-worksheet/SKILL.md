@@ -1,5 +1,6 @@
 ---
 name: pitch-worksheet
+wtfbId: wtfb:pitch-worksheet
 description: |
   This skill provides a structured pitch development worksheet for screenwriters.
   Covers logline creation, story structure breakdown, character summaries,

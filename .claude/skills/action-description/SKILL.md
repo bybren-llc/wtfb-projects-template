@@ -1,5 +1,6 @@
 ---
 name: action-description
+wtfbId: wtfb:action-description
 description: |
   This skill provides screenplay action and description writing techniques.
   Covers present tense formatting, visual storytelling, action sequences,

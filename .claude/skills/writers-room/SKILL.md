@@ -1,5 +1,6 @@
 ---
 name: writers-room
+wtfbId: wtfb:writers-room
 description: |
   This skill convenes a 6-agent collaborative pre-production session.
   Story Architect, Dialogue Writer, Scene Writer, Research Specialist,

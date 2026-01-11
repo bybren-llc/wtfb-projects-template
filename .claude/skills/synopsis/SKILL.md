@@ -1,5 +1,6 @@
 ---
 name: synopsis
+wtfbId: wtfb:synopsis
 description: |
   This skill provides one-page synopsis writing techniques for screenplays.
   Covers the five requirements of a good synopsis, synopsis vs treatment

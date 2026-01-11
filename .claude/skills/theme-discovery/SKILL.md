@@ -1,5 +1,6 @@
 ---
 name: theme-discovery
+wtfbId: wtfb:theme-discovery
 description: |
   This skill provides personal theme mining exercises for screenwriters.
   Covers finding compelling themes from life experiences, analyzing what

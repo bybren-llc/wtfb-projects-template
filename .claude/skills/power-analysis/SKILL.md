@@ -1,5 +1,6 @@
 ---
 name: power-analysis
+wtfbId: wtfb:power-analysis
 description: |
   This skill provides power dynamics analysis for screenplay scenes.
   Covers immediate, imminent, and underlying conflict types, antagonist

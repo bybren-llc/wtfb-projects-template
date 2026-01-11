@@ -1,5 +1,6 @@
 ---
 name: fountain-syntax
+wtfbId: wtfb:fountain-syntax
 description: |
   This skill provides complete Fountain screenplay format syntax reference.
   Covers title page, scene headings, action, character names, dialogue,

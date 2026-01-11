@@ -1,5 +1,6 @@
 ---
 name: page-estimation
+wtfbId: wtfb:page-estimation
 description: |
   This skill provides screenplay page count and runtime estimation formulas.
   Covers the page-to-screen rule (1 page = 1 minute), genre adjustments,

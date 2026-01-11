@@ -1,5 +1,6 @@
 ---
 name: arc-check
+wtfbId: wtfb:arc-check
 description: |
   This skill validates character arc development throughout a screenplay.
   Covers positive, negative, transformational, and flat arc types with

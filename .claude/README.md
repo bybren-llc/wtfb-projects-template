@@ -65,6 +65,38 @@ Skills provide specialized knowledge modules:
 - **Character Arcs** - Arc development
 - **Continuity Tracking** - Consistency verification
 
+## Capability Identification
+
+All capabilities in the harness use a canonical identifier (`wtfbId`) for registry and plugin compatibility:
+
+### Namespace Convention
+
+| Source | Namespace | Example |
+|--------|-----------|---------|
+| Template (this repo) | `wtfb:` | `wtfb:story-structure` |
+| Marketplace plugins | `{plugin}:` | `wtfb-screenwriting:advanced-structure` |
+
+### Requirement by Type
+
+| Capability | wtfbId Required? |
+|------------|------------------|
+| Skills | **REQUIRED** |
+| Commands | **RECOMMENDED** |
+| Hooks | **OPTIONAL** |
+| Agents | **OPTIONAL** |
+
+### Example Skill Frontmatter
+
+```yaml
+---
+name: story-structure
+wtfbId: wtfb:story-structure
+description: Three-act screenplay structure with beat placement.
+---
+```
+
+See [Capability Contract](../docs/guides/CAPABILITY_CONTRACT.md) for full specification.
+
 ## Usage
 
 Commands are invoked using slash syntax:

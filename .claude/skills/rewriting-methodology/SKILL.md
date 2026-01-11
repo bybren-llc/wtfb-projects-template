@@ -1,5 +1,6 @@
 ---
 name: rewriting-methodology
+wtfbId: wtfb:rewriting-methodology
 description: |
   This skill provides the WTFB 6-step screenplay rewriting process.
   Covers identifying story threads, evaluating scenes, improving dialogue,

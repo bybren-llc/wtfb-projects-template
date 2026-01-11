@@ -1,5 +1,6 @@
 ---
 name: scene-headings
+wtfbId: wtfb:scene-headings
 description: |
   This skill provides Fountain scene heading formatting rules and conventions.
   Covers INT/EXT prefixes, location naming, time of day indicators,

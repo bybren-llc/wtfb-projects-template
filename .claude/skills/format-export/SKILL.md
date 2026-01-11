@@ -1,5 +1,6 @@
 ---
 name: format-export
+wtfbId: wtfb:format-export
 description: |
   This skill provides screenplay export procedures for PDF, FDX, and HTML.
   Covers Better Fountain VS Code extension, afterwriting CLI, and Highland

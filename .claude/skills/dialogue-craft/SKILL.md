@@ -1,5 +1,6 @@
 ---
 name: dialogue-craft
+wtfbId: wtfb:dialogue-craft
 description: |
   This skill provides dialogue writing techniques for screenplays.
   Covers subtext, character voice differentiation, exposition handling,

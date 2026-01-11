@@ -220,6 +220,92 @@ We've already built a [software development harness](https://github.com/bybren-l
 
 ---
 
+## The WTFB Ecosystem
+
+WTFB uses a **hub-spoke architecture** that's infinitely extensible:
+
+- **Hub**: This template — complete 11-agent writing harness (free, OSS)
+- **Spokes**: Plugins that extend capabilities (free or paid)
+
+```
+              ┌──────────────────┐
+              │  wtfb-projects-  │
+              │    template      │
+              │   (The Hub)      │
+              │  11 agents       │
+              │  24 skills       │
+              │  30 commands     │
+              └────────┬─────────┘
+                       │
+       ┌───────────────┼───────────────┐
+       │               │               │
+       ▼               ▼               ▼
+  ┌─────────┐    ┌─────────┐    ┌─────────┐
+  │  Your   │    │  WTFB   │    │Community│
+  │ Plugin  │    │ Premium │    │ Plugins │
+  │ (Free)  │    │ (Paid)  │    │ (Free)  │
+  └─────────┘    └─────────┘    └─────────┘
+```
+
+**The hub is complete by itself.** You can write, validate, and export without any plugins. But if you want more — specialized workflows, enhanced skills, professional tools — plugins extend the foundation.
+
+---
+
+## Creating Your Own Plugins
+
+Anyone can extend WTFB. The architecture is open.
+
+### Free Plugins (Contribute to Community)
+
+1. Fork this template or create a new plugin repo
+2. Add skills/commands following the [Capability Contract](docs/guides/CAPABILITY_CONTRACT.md)
+3. Submit PR or publish independently
+4. Community benefits, you get credit
+
+### Paid Plugins (Marketplace)
+
+1. Follow the same capability contract
+2. Add premium features (enhanced skills, workflows)
+3. Submit to [WTFB Marketplace](https://github.com/bybren-llc/wtfb-claude-marketplace) for review
+4. Earn revenue from your expertise
+
+### WTFB's Own Plugins (Leading by Example)
+
+We practice what we preach:
+
+| Plugin | What It Adds |
+|--------|--------------|
+| `wtfb-screenwriting` | Our proprietary WTFB methodology, showrunner workflows |
+| `wtfb-novel-writing` | Extended narrative tools, chapter pacing |
+| `wtfb-film-production` | Call sheets, scheduling, budget tracking |
+
+These demonstrate how to build premium enhancements that don't duplicate the base — they extend it.
+
+**Technical Details:** See [Plugin Architecture](docs/guides/PLUGIN_ARCHITECTURE.md) and [Capability Contract](docs/guides/CAPABILITY_CONTRACT.md).
+
+---
+
+## Join the WTFB Community
+
+```
+Use the Tools → Join Community → Take Courses → Get Published → Launch IRL
+      ↓              ↓              ↓              ↓              ↓
+  Write more    Get feedback   Master craft   WTFB publishes   Film/TV
+  Write better  Find collaborators  Network    Promotes you    Distribution
+```
+
+We're building more than tools. We're building a path from idea to screen:
+
+- **Use the tools** — Write more, write better
+- **Join the community** — Get feedback, find collaborators
+- **Take our courses** — Master the WTFB methodology
+- **Get published** — Submit your work for WTFB consideration
+- **Launch IRL** — From page to screen, we help make it real
+
+**Website**: [wordstofilmby.com](https://wordstofilmby.com)
+
+---
+
 ## Documentation
 
 | Document | Purpose |
@@ -230,6 +316,15 @@ We've already built a [software development harness](https://github.com/bybren-l
 | [docs/WORKFLOW.md](docs/WORKFLOW.md) | Git workflow guide |
 | [docs/WTFB-HARNESS-PAPER.md](docs/WTFB-HARNESS-PAPER.md) | Architecture deep-dive |
 | [docs/COMPETITIVE-ANALYSIS-MULTI-AGENT-HARNESS.md](docs/COMPETITIVE-ANALYSIS-MULTI-AGENT-HARNESS.md) | Market analysis & positioning |
+
+### Plugin Development Guides
+
+| Guide | Purpose |
+|-------|---------|
+| [docs/guides/CAPABILITY_CONTRACT.md](docs/guides/CAPABILITY_CONTRACT.md) | Technical spec for plugin authors |
+| [docs/guides/PLUGIN_ARCHITECTURE.md](docs/guides/PLUGIN_ARCHITECTURE.md) | How plugins extend the template |
+| [docs/guides/USER_ACCESS_TIERS.md](docs/guides/USER_ACCESS_TIERS.md) | Access levels (Community, Pro, Internal) |
+| [docs/guides/TEMPLATE_MARKETPLACE_RELATIONSHIP.md](docs/guides/TEMPLATE_MARKETPLACE_RELATIONSHIP.md) | Ecosystem overview |
 
 ---
 

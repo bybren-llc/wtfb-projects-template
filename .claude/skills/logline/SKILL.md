@@ -1,5 +1,6 @@
 ---
 name: logline
+wtfbId: wtfb:logline
 description: |
   This skill provides logline (hook) writing techniques for screenplays.
   Covers the four components (characters, conflict, setting, action),
